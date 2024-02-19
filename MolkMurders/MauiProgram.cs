@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Molk_Murders
+namespace MolkMurders
 {
     public static class MauiProgram
     {

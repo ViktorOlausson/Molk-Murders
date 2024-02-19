@@ -1,4 +1,4 @@
-﻿namespace Molk_Murders
+﻿namespace MolkMurders
 {
     public partial class App : Application
     {

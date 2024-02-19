@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Molk_Murders
+namespace MolkMurders
 {
     [Application]
     public class MainApplication : MauiApplication

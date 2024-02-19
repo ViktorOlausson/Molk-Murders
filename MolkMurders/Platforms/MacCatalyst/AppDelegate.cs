@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Molk_Murders
+namespace MolkMurders
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

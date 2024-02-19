@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Molk_Murders
+namespace MolkMurders
 {
     public class Program
     {
