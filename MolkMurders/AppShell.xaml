@@ -21,7 +21,7 @@
                    WidthRequest="50"/>
 
                 <Label Grid.Column="1"
-                   Text="Abhay Prince"
+                   Text="mölk murder"
                    VerticalTextAlignment="Center"
                    FontSize="28"
                    FontAttributes="Bold"
@@ -35,7 +35,7 @@
         Route="MainPage" />
     
     <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:MainPage}"
-    Route="MainPage" />
+        Title="Inställningar"
+        ContentTemplate="{DataTemplate local:Settings}"
+        Route="Settings" />
 </Shell>
