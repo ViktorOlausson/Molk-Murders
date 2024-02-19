@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MolkMurders.MainPage">
 
+    
     <ScrollView>
+
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
