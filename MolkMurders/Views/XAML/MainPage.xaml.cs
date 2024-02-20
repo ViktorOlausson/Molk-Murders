@@ -6,44 +6,31 @@ namespace MolkMurders
     {
         int count = 0;
 
+        int someNumber = 0;
+
         public MainPage()
         {
-            var label1 = new Label {
-                Text = "Label 1",
-                FontSize = 20
-            };
+            InitializeComponent();
 
-            var stackLayout = new StackLayout {
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Spacing = 10
-            };
-
-            // Add initial content to the stackLayout
-            stackLayout.Children.Add(label1);
-
-            // Button to add more content
             var addButton = new Button {
-                Text = "Add Label",
+                Text = "This button was added directly from MainPage.xaml.cs",
                 Margin = new Thickness(0, 10, 0, 0)
             };
 
+            ScrollView scrollView = (ScrollView)Content;
+            VerticalStackLayout stackLayout = (VerticalStackLayout)scrollView.Content;
+
             addButton.Clicked += (sender, e) => {
-                // Add new content to the stackLayout
                 stackLayout.Children.Add(new Label {
-                    Text = "Label 2",
+                    Text = $"Label {++someNumber}",
                     FontSize = 20
                 });
             };
 
-            // Add the stackLayout and the addButton to the content of the page
-            Content = new StackLayout {
-                Children = { stackLayout, addButton },
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-                Padding = new Thickness(20)
-            };
+            stackLayout.Children.Add(addButton);
         }
+
+        
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
