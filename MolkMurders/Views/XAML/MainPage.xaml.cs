@@ -61,6 +61,16 @@ namespace MolkMurders
                 HeightRequest = 64,
             };
 
+            AbsoluteLayout al = new AbsoluteLayout {
+
+            };
+            al.Add(image);
+            al.Add(new Image {
+                Source = profile.PortraitPath,
+                HeightRequest = 32,
+                TranslationX = 38, TranslationY = 38,
+            });
+
             Frame frame = new Frame {
                 WidthRequest = 300,
                 HeightRequest = 100,
@@ -68,11 +78,12 @@ namespace MolkMurders
 
             HorizontalStackLayout hz = new HorizontalStackLayout {
                 Children = {
-                    image,
+                    al,
                     new Label {
-                        Text = "It's Steeeeeve!",
+                        Text = "It's Steeeeeve!\nAnd baby Steeeeeve!",
                     }
-                }
+                },
+                Spacing = 10,
             };
 
             frame.Content = hz;
