@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MolkMurdersSystem {
     public class CharacterProfile {
-        public string PortraitPath = "dotnet_bot.png";
+        public string PortraitPath = "steve.png";
         public string Name = "Steve";
     }
 }

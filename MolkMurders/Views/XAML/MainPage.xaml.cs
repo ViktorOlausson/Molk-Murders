@@ -1,4 +1,5 @@
-﻿using MolkMurdersSystem;
+﻿using Microsoft.Maui.Controls.Shapes;
+using MolkMurdersSystem;
 
 namespace MolkMurders
 {
@@ -21,10 +22,13 @@ namespace MolkMurders
             VerticalStackLayout stackLayout = (VerticalStackLayout)scrollView.Content;
 
             addButton.Clicked += (sender, e) => {
+                /*
                 stackLayout.Children.Add(new Label {
                     Text = $"Label {++someNumber}",
                     FontSize = 20
                 });
+                */
+                CreateHappeningThing();
             };
 
             stackLayout.Children.Add(addButton);
@@ -47,6 +51,39 @@ namespace MolkMurders
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void CreateHappeningThing() {
+
+            CharacterProfile profile = new CharacterProfile();
+
+            Image image = new Image {
+                Source = profile.PortraitPath,
+                HeightRequest = 64,
+            };
+
+            Frame frame = new Frame {
+                WidthRequest = 300,
+                HeightRequest = 100,
+            };
+
+            HorizontalStackLayout hz = new HorizontalStackLayout {
+                Children = {
+                    image,
+                    new Label {
+                        Text = "It's Steeeeeve!",
+                    }
+                }
+            };
+
+            frame.Content = hz;
+
+            ScrollView scrollView = (ScrollView)Content;
+            VerticalStackLayout stackLayout = (VerticalStackLayout)scrollView.Content;
+
+            stackLayout.Children.Add(frame);
+
+        }
+
     }
 
 }
