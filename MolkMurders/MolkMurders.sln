@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MolkMurders", "MolkMurders.csproj", "{515BA818-A69A-4131-9CC4-C6B3C7304865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MolkMurders", "MolkMurders.csproj", "{515BA818-A69A-4131-9CC4-C6B3C7304865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MolkMurdersSystem", "..\MolkMurdersSystem\MolkMurdersSystem.csproj", "{5EA834E0-41F0-4AA8-9801-6E8FB5B30915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{515BA818-A69A-4131-9CC4-C6B3C7304865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{515BA818-A69A-4131-9CC4-C6B3C7304865}.Release|Any CPU.Build.0 = Release|Any CPU
 		{515BA818-A69A-4131-9CC4-C6B3C7304865}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5EA834E0-41F0-4AA8-9801-6E8FB5B30915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA834E0-41F0-4AA8-9801-6E8FB5B30915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA834E0-41F0-4AA8-9801-6E8FB5B30915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA834E0-41F0-4AA8-9801-6E8FB5B30915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

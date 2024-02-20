@@ -8,8 +8,7 @@
     Title="MolkMurders">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="Views.XAML.MainPage" />
 
 </Shell>
