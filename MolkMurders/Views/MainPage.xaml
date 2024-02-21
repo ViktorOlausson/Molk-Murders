@@ -19,7 +19,9 @@
                 >
                 <Label FontSize="20">Mölky Mörders</Label>
                 <Button
+                    x:Name="startButton"
                     Text="Start!!!!"
+                    Clicked="OnStartButtonClicked"
                  />
                 <Button
                     Text="Exit!!!!!!!!"

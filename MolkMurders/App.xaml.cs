@@ -1,4 +1,7 @@
-﻿namespace MolkMurders
+﻿using Microsoft.Maui.Controls;
+using MolkMurders.Views;
+
+namespace MolkMurders
 {
     public partial class App : Application
     {
@@ -8,5 +11,6 @@
 
             MainPage = new AppShell();
         }
+
     }
 }
