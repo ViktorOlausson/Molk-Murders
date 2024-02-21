@@ -1,12 +1,11 @@
 namespace MolkMurders.Views;
 
-public partial class CharacterStatsPopup 
+public partial class Settings
 {
-	public CharacterStatsPopup()
+	public Settings()
 	{
 		InitializeComponent();
 	}
-
 	private void CloseBtn_Clicked(object sender, EventArgs e)
 	{
 		Close();

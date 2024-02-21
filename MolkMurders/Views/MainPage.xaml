@@ -33,6 +33,10 @@
                 x:Name="StatsPopupBtn"
                 Text="Character Stats"
                 Clicked="StatsPopupBtn_Clicked"/>
+            <Button
+                x:Name="Settings"
+                Text="Inställningar"
+                Clicked="Settings_Clicked"/>
 
         </VerticalStackLayout>
     </ScrollView>

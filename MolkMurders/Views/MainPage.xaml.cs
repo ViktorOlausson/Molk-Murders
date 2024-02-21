@@ -24,11 +24,7 @@ namespace MolkMurders
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-
-		private void StatsPopupBtn_Clicked(object sender, EventArgs e)
-		{
-            this.ShowPopup(new CharacterStatsPopup());
-		}
-	}
-
+		// this.ShowPopup(new CharacterStatsPopup());
+		// this.ShowPopup(new Settings());
+    }
 }

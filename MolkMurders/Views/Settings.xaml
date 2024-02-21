@@ -2,7 +2,7 @@
 <mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
            xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-           x:Class="MolkMurders.Views.CharacterStatsPopup"
+           x:Class="MolkMurders.Views.Settings"
            CanBeDismissedByTappingOutsideOfPopup="False">
     <VerticalStackLayout>
         <Button 
@@ -12,10 +12,8 @@
             VerticalOptions="Center"
             HorizontalOptions="Center"/>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Settings"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Label
-            Text="Hejhopp"/>
     </VerticalStackLayout>
 </mct:Popup>
