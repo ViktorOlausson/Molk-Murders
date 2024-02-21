@@ -1,18 +1,19 @@
-﻿using MolkMurders.Views;
+﻿using MolkMurders.ViewModels;
+using MolkMurders.Views;
 
 namespace MolkMurders
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
-        public MainPage()
+        public MainPage(MainViewModel vm)
         {
             InitializeComponent();
+            BindingContext = vm;
         }
 
-        async void NextPageNaviation(System.Object sender, System.EventArgs e) {
-            await Navigation.PushAsync(new Gameplay(), true);
+        async void OnStartButtonClicked(object sender, EventArgs e) {
+            await Shell.Current.GoToAsync(nameof(GameplayPage));
         }
 
     }
