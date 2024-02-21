@@ -28,6 +28,9 @@ namespace MolkMurders
             builder.Services.AddTransient<GameplayPage>();
             builder.Services.AddTransient<GameplayViewModel>();
 
+            builder.Services.AddSingleton<SetupPage>();
+            builder.Services.AddSingleton<SetupPageViewModel>();
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif

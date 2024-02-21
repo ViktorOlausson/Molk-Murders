@@ -14,7 +14,7 @@ namespace MolkMurders
         }
 
         async void OnStartButtonClicked(object sender, EventArgs e) {
-            await Shell.Current.GoToAsync(nameof(GameplayPage), false);
+            await Shell.Current.GoToAsync(nameof(SetupPage), false);
         }
         
 		    // this.ShowPopup(new CharacterStatsPopup());
