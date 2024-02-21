@@ -67,4 +67,10 @@
 	  <ProjectReference Include="..\MolkMurdersSystem\MolkMurdersSystem.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Views\Gameplay.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

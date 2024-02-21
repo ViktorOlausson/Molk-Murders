@@ -1,4 +1,6 @@
-﻿namespace MolkMurders
+﻿using MolkMurders.Views;
+
+namespace MolkMurders
 {
     public partial class MainPage : ContentPage
     {
@@ -8,6 +10,11 @@
         {
             InitializeComponent();
         }
+
+        async void NextPageNaviation(System.Object sender, System.EventArgs e) {
+            await Navigation.PushAsync(new Gameplay(), true);
+        }
+
     }
 
 }
