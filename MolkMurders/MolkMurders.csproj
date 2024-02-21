@@ -69,14 +69,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\GameplayPage.xaml.cs">
+    <Compile Update="Views\GameplayPage.xaml.cs">
 	    <DependentUpon>GameplayPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\GameplayPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+   
+   <ItemGroup>
+     <MauiXaml Update="Views\CharacterStatsPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings.xaml">
+     <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
 
