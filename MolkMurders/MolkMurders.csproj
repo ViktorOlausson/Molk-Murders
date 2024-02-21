@@ -64,7 +64,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="NewFolder\" />
+	  <ProjectReference Include="..\MolkMurdersSystem\MolkMurdersSystem.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
