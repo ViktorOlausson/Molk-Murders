@@ -1,4 +1,8 @@
-﻿namespace MolkMurders
+﻿using CommunityToolkit.Maui.Views;
+using MolkMurders.Views;
+
+
+namespace MolkMurders
 {
     public partial class MainPage : ContentPage
     {
@@ -20,6 +24,11 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-    }
+
+		private void StatsPopupBtn_Clicked(object sender, EventArgs e)
+		{
+            this.ShowPopup(new CharacterStatsPopup());
+		}
+	}
 
 }
