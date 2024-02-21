@@ -1,4 +1,8 @@
-﻿namespace MolkMurders
+﻿using CommunityToolkit.Maui.Views;
+using MolkMurders.Views;
+
+
+namespace MolkMurders
 {
     public partial class MainPage : ContentPage
     {
@@ -8,6 +12,7 @@
         {
             InitializeComponent();
         }
+		// this.ShowPopup(new CharacterStatsPopup());
+		// this.ShowPopup(new Settings());
     }
-
 }

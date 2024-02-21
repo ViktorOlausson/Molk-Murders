@@ -24,9 +24,7 @@
                 <Button
                     Text="Exit!!!!!!!!"
                  />
-
             </VerticalStackLayout>
-
         </StackLayout>
     </ScrollView>
 
