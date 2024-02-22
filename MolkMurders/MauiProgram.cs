@@ -28,8 +28,11 @@ namespace MolkMurders
             builder.Services.AddTransient<GameplayPage>();
             builder.Services.AddTransient<GameplayViewModel>();
 
+			builder.Services.AddTransientPopup<CharacterStatsPopup>();
+			builder.Services.AddTransientPopup<PopupSkillpointViewModel>();
+
 #if DEBUG
-            builder.Logging.AddDebug();
+			builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

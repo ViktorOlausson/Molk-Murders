@@ -62,11 +62,11 @@
         <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="Blue">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -93,7 +93,8 @@
                             Text="+"
                             Clicked="PlusBtn_Clicked_iq"/>
                 </HorizontalStackLayout>
-
+                <Frame Grid.Column="1"
+                       Grid.Row="3"/>
                 <!-- PlaceHolder for stats -->
                 <Label Grid.Column="0"
                        Grid.Row="2"
