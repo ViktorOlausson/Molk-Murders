@@ -1,4 +1,5 @@
 using MolkMurders.ViewModels;
+using System.Diagnostics;
 
 namespace MolkMurders.Views;
 
@@ -15,4 +16,9 @@ public partial class SetupPage : ContentPage
     async void OnStartButtonClicked(object sender, EventArgs e) {
         await Shell.Current.GoToAsync(nameof(GameplayPage), false);
     }
+
+    async void OnEditCharacterButtonClicked(object sender, EventArgs e) {
+
+    }
+
 }

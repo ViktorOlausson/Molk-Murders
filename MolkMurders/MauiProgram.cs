@@ -19,6 +19,9 @@ namespace MolkMurders
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // Låter oss skriva saker till konsolen
+            builder.Logging.AddDebug();
+
             // ViewModels
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
