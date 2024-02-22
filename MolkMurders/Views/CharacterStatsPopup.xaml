@@ -3,19 +3,146 @@
            xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            x:Class="MolkMurders.Views.CharacterStatsPopup"
-           CanBeDismissedByTappingOutsideOfPopup="False">
-    <VerticalStackLayout>
-        <Button 
-            x:Name="CloseBtn"
-            Text="X"
-            Clicked="CloseBtn_Clicked"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"/>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Label
-            Text="Hejhopp"/>
-    </VerticalStackLayout>
+           CanBeDismissedByTappingOutsideOfPopup="False"
+           Size="1200, 700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Top fliken -->
+        <Label Grid.Row="0"
+               Grid.ColumnSpan="2"
+               Text="Karaktärs anpassning"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="30"/>
+        <Button Grid.Row="0"
+                Grid.ColumnSpan="2"
+                x:Name="CloseBtn"
+                Text="X"
+                Clicked="CloseBtn_Clicked"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                BackgroundColor="Red"
+                BorderColor="Black"
+                BorderWidth="0.4"/>
+
+        <!-- Skill points amount --> 
+        <StackLayout Grid.Row="1"
+                     Grid.Column="1"
+                     Background="Black">
+            <Label x:Name="skillPointsAmount"
+                   Text="Tillgängliga poäng: &lt;skillPoints&gt;"
+                   FontSize="30"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+                    
+        <!-- Karaktär Header -->
+        <StackLayout Grid.Row="1"
+                     BackgroundColor="DarkOliveGreen">
+            <Label x:Name="Karaktär"
+                   Text="Karaktär"
+                   FontSize="30"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Karaktärs anpassning -->
+        <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="Green">
+            <Label Text="Test vänster"/>
+        </StackLayout>
+
+        <!-- Skill points modifier -->
+        <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="Blue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- PlaceHolder for stats -->
+                <Label Grid.Column="0"
+                       Grid.Row="1"
+                       Text="IQ"/>
+
+                <HorizontalStackLayout Grid.Column="1"
+                                        Grid.Row="1"
+                                        Spacing="20">
+                    <Button x:Name="MinusBtniq"
+                            Text="-"
+                            Clicked="MinusBtn_Clicked_iq"/>
+                    <Label Text="Amount points"
+                            x:Name="iqPoints"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                    <Button x:Name="PlusBtniq"
+                            Text="+"
+                            Clicked="PlusBtn_Clicked_iq"/>
+                </HorizontalStackLayout>
+
+                <!-- PlaceHolder for stats -->
+                <Label Grid.Column="0"
+                       Grid.Row="2"
+                       Text="Styrka"
+                       HorizontalOptions="Center"/>
+                <HorizontalStackLayout Grid.Column="1"
+                                       Grid.Row="2">
+                    <Button x:Name="MinusBtnStrength"
+                            Text="-"
+                            Clicked="MinusBtn_Clicked_strength"/>
+                    <Label Text="Amount points"
+                           x:Name="Strength"/>
+                    <Button x:Name="PlusBtnStrength"
+                            Text="+"
+                            Clicked="PlusBtn_Clicked_strength"/>
+                </HorizontalStackLayout>
+
+                <!-- PlaceHolder for stats -->
+                <Label Grid.Column="0"
+                       Grid.Row="3"
+                       Text="Försvar"/>
+                <HorizontalStackLayout Grid.Column="1"
+                                       Grid.Row="3">
+                    <Button x:Name="MinusBtnDefense"
+                            Text="-"
+                            Clicked="MinusBtn_Clicked_defense"/>
+                    <Label Text="Amount points"
+                           x:Name="Defense"/>
+                    <Button x:Name="PlusBtnDefense"
+                            Text="+"
+                            Clicked="PlusBtn_Clicked_defense"/>
+                </HorizontalStackLayout>
+
+                <!-- PlaceHolder for stats -->
+                <Label Grid.Column="0"
+                       Grid.Row="4"
+                       Text="Agility"/>
+                <HorizontalStackLayout Grid.Column="1"
+                                       Grid.Row="4">
+                    <Button x:Name="MinusBtnAgility"
+                            Text="-"
+                            Clicked="MinusBtn_Clicked_agility"/>
+                    <Label Text="Amount points"
+                           x:Name="Agility"/>
+                    <Button x:Name="PlusBtnAgility"
+                            Text="+"
+                            Clicked="PlusBtn_Clicked_agility"/>
+                </HorizontalStackLayout>
+            </Grid>
+        </StackLayout>
+    </Grid>
 </mct:Popup>
