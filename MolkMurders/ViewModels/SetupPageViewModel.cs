@@ -17,7 +17,7 @@ namespace MolkMurders.ViewModels {
         }
 
         private void ExecuteMyCommand(string parameter) {
-            Trace.WriteLine($"Den här knappen har en paramter, och den är {parameter}!");
+            Trace.WriteLine($"Den här knappen har en parameter, och den är {parameter}!");
         }
 
     }
