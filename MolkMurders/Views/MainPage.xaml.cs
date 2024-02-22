@@ -17,10 +17,10 @@ namespace MolkMurders
             await Shell.Current.GoToAsync(nameof(GameplayPage), false);
         }
 
-		async void SkillPoints_Clicked(object sender, EventArgs e)
+		private void SkillPoints_Clicked(object sender, EventArgs e)
 		{
-			await Shell.Current.ShowPopupAsync(nameof(CharacterStatsPopup));
-			//this.ShowPopup(new CharacterStatsPopup());
+			//await Shell.Current.ShowPopupAsync(nameof(CharacterStatsPopup));
+			this.ShowPopup(new CharacterStatsPopup());
 		}
 	}
 }

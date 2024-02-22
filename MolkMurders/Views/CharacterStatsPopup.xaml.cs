@@ -14,10 +14,10 @@ public partial class CharacterStatsPopup : Popup
 	private int maxSkillPoint = 20;
 	private int skillPoint = 0;
 
-	public CharacterStatsPopup(PopupSkillpointViewModel vm)
+	public CharacterStatsPopup()
 	{
 		InitializeComponent();
-		BindingContext = vm;
+		// BindingContext = vm;
 		string pointsToApply = "Tillgängliga poäng: ";
 		// int iq = 0;
 		int skillAmount = 0;

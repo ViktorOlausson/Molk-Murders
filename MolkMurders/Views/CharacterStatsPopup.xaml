@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="350"/>
         </Grid.ColumnDefinitions>
 
         <!-- Top fliken -->
@@ -34,16 +34,6 @@
                 BorderColor="Black"
                 BorderWidth="0.4"/>
 
-        <!-- Skill points amount --> 
-        <StackLayout Grid.Row="1"
-                     Grid.Column="1"
-                     Background="Black">
-            <Label x:Name="skillPointsAmount"
-                   Text="Tillgängliga poäng: &lt;skillPoints&gt;"
-                   FontSize="30"
-                   HorizontalOptions="Center"/>
-        </StackLayout>
-                    
         <!-- Karaktär Header -->
         <StackLayout Grid.Row="1"
                      BackgroundColor="DarkOliveGreen">
@@ -58,7 +48,17 @@
             <Label Text="Test vänster"/>
         </StackLayout>
 
-        <!-- Skill points modifier -->
+        <!-- Skill points amount -->
+        <StackLayout Grid.Row="1"
+                     Grid.Column="1"
+                     Background="Black">
+            <Label x:Name="skillPointsAmount"
+                   Text="Tillgängliga poäng: &lt;skillPoints&gt;"
+                   FontSize="30"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <!-- Skill points modifier sida -->
         <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="Blue">
             <Grid>
                 <Grid.RowDefinitions>
@@ -71,77 +71,146 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- PlaceHolder for stats -->
+
+                <Frame Grid.ColumnSpan="2"
+                       Grid.Row="0"/>
+                <Frame Grid.ColumnSpan="2"
+                       Grid.Row="1"/>
+                <Frame Grid.ColumnSpan="2"
+                       Grid.Row="2"/>
+                <Frame Grid.ColumnSpan="2"
+                       Grid.Row="3"/>
+                <Frame Grid.ColumnSpan="2"
+                       Grid.Row="4"/>
+                
+                <!-- Character Picker -->
+                <StackLayout Grid.Column="0"
+                             Grid.ColumnSpan="2"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Fill">
+                    <Picker x:Name="CharacterPicker"
+                            BackgroundColor="White"
+                            HorizontalOptions="Fill">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Ny</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>                
+                <!-- PlaceHolder for stats <IQ> -->
                 <Label Grid.Column="0"
                        Grid.Row="1"
-                       Text="IQ"/>
-
+                       Text="IQ"
+                       FontSize="25"
+                       VerticalTextAlignment="Center"
+                       Padding="20"/>
                 <HorizontalStackLayout Grid.Column="1"
-                                        Grid.Row="1"
-                                        Spacing="20">
+                                       Grid.Row="1"
+                                       Spacing="20">
                     <Button x:Name="MinusBtniq"
                             Text="-"
-                            Clicked="MinusBtn_Clicked_iq"/>
+                            Clicked="MinusBtn_Clicked_iq"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                     <Label Text="Amount points"
                             x:Name="iqPoints"
-                            HorizontalTextAlignment="Center"
-                            VerticalTextAlignment="Center"/>
+                            VerticalTextAlignment="Center"
+                            FontSize="25"/>
                     <Button x:Name="PlusBtniq"
                             Text="+"
-                            Clicked="PlusBtn_Clicked_iq"/>
+                            Clicked="PlusBtn_Clicked_iq"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                 </HorizontalStackLayout>
-                <Frame Grid.Column="1"
-                       Grid.Row="3"/>
-                <!-- PlaceHolder for stats -->
+                
+                <!-- PlaceHolder for stats <STYRKA> -->
                 <Label Grid.Column="0"
                        Grid.Row="2"
                        Text="Styrka"
-                       HorizontalOptions="Center"/>
+                       FontSize="25"
+                       VerticalTextAlignment="Center"
+                       Padding="20"/>
                 <HorizontalStackLayout Grid.Column="1"
-                                       Grid.Row="2">
+                                       Grid.Row="2"
+                                       Spacing="20">
                     <Button x:Name="MinusBtnStrength"
                             Text="-"
-                            Clicked="MinusBtn_Clicked_strength"/>
+                            Clicked="MinusBtn_Clicked_strength"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                     <Label Text="Amount points"
-                           x:Name="Strength"/>
+                           x:Name="Strength"
+                           VerticalTextAlignment="Center"
+                           FontSize="25"/>
                     <Button x:Name="PlusBtnStrength"
                             Text="+"
-                            Clicked="PlusBtn_Clicked_strength"/>
+                            Clicked="PlusBtn_Clicked_strength"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                 </HorizontalStackLayout>
 
-                <!-- PlaceHolder for stats -->
+                <!-- PlaceHolder for stats <FÖRSVAR> -->
                 <Label Grid.Column="0"
                        Grid.Row="3"
-                       Text="Försvar"/>
+                       Text="Försvar"
+                       FontSize="25"
+                       VerticalTextAlignment="Center"
+                       Padding="20"/>
                 <HorizontalStackLayout Grid.Column="1"
-                                       Grid.Row="3">
+                                       Grid.Row="3"
+                                       Spacing="20">
                     <Button x:Name="MinusBtnDefense"
                             Text="-"
-                            Clicked="MinusBtn_Clicked_defense"/>
+                            Clicked="MinusBtn_Clicked_defense"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                     <Label Text="Amount points"
-                           x:Name="Defense"/>
+                           x:Name="Defense"
+                           VerticalTextAlignment="Center"
+                           FontSize="25"/>
                     <Button x:Name="PlusBtnDefense"
                             Text="+"
-                            Clicked="PlusBtn_Clicked_defense"/>
+                            Clicked="PlusBtn_Clicked_defense"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                 </HorizontalStackLayout>
 
-                <!-- PlaceHolder for stats -->
+                <!-- PlaceHolder for stats <SMIDIGHET> -->
                 <Label Grid.Column="0"
                        Grid.Row="4"
-                       Text="Agility"/>
+                       Text="Agility"
+                       FontSize="25"
+                       VerticalTextAlignment="Center"
+                       Padding="20"/>
                 <HorizontalStackLayout Grid.Column="1"
-                                       Grid.Row="4">
+                                       Grid.Row="4"
+                                       Spacing="20">
                     <Button x:Name="MinusBtnAgility"
                             Text="-"
-                            Clicked="MinusBtn_Clicked_agility"/>
+                            Clicked="MinusBtn_Clicked_agility"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                     <Label Text="Amount points"
-                           x:Name="Agility"/>
+                           x:Name="Agility"
+                           VerticalTextAlignment="Center"
+                           FontSize="25"/>
                     <Button x:Name="PlusBtnAgility"
                             Text="+"
-                            Clicked="PlusBtn_Clicked_agility"/>
+                            Clicked="PlusBtn_Clicked_agility"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            FontSize="25"/>
                 </HorizontalStackLayout>
             </Grid>
         </StackLayout>
