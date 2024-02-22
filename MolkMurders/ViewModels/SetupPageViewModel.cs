@@ -10,15 +10,14 @@ using System.Windows.Input;
 namespace MolkMurders.ViewModels {
     public partial class SetupPageViewModel : ObservableObject {
 
-        public ICommand MyCommand { get; private set; }
+        public ICommand EditCharacterCommand { get; private set; }
         
         public SetupPageViewModel() {
-            MyCommand = new Command<string>(ExecuteMyCommand);
+            EditCharacterCommand = new Command<string>(ExecuteMyCommand);
         }
 
         private void ExecuteMyCommand(string parameter) {
-            // Here, 'parameter' will contain the value of CommandParameters
-            Trace.WriteLine($"Command executed with parameter: {parameter}");
+            Trace.WriteLine($"Den här knappen har en paramter, och den är {parameter}!");
         }
 
     }

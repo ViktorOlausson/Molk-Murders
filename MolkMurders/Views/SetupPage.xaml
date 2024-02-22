@@ -40,8 +40,8 @@
                                     />
                                 <Button Text="Edit Character"
                                         HorizontalOptions="End"
-                                        Command="{Binding MyCommand}"
-                                        CommandParameter="0"
+                                        Command="{Binding EditCharacterCommand}"
+                                        CommandParameter="Steeeeeeve"
                                         />
 
                             </HorizontalStackLayout>
