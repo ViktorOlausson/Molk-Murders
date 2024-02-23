@@ -17,6 +17,11 @@ namespace MolkMurders
             await Shell.Current.GoToAsync(nameof(SetupPage), false);
         }
 
+        private void settingsButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
         // this.ShowPopup(new CharacterStatsPopup());
         // this.ShowPopup(new Settings());
     }

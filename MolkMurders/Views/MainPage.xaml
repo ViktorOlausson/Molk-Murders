@@ -11,6 +11,8 @@
             <Button
                 Text="Settings"
                 HorizontalOptions="Start"
+                x:Name="settingsButton"
+                Clicked="settingsButtonClicked"
                 />
 
             <VerticalStackLayout Margin="20"
