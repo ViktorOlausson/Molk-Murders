@@ -1,5 +1,6 @@
 using MolkMurders.ViewModels;
 using MolkMurdersSystem;
+using System.Diagnostics;
 
 namespace MolkMurders.Views;
 
@@ -10,11 +11,16 @@ public partial class GameplayPage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 
-		BuildEventBox(new EventData("Damn.", new Character[] {new Character(), new Character(), new Character { State = Character.LivingState.Dead } }));
+		// BuildEventBox(new EventData("Damn.", new Character[] {new Character(), new Character(), new Character { State = Character.LivingState.Dead } }));
 
 	}
 
-	private void BuildEventBox(EventData data) {
+    protected override void OnAppearing() {
+		// Load all event boxes by the current round.
+
+    }
+
+    private void BuildEventBox(EventData data) {
 
 		HorizontalStackLayout portraits = new HorizontalStackLayout {
             HeightRequest = 100, HorizontalOptions = LayoutOptions.Center, Spacing = 15,

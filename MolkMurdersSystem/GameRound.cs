@@ -17,6 +17,8 @@ namespace MolkMurdersSystem {
             foreach(Character c in Main.CurrentGame.Characters) {
 
             }
+
+            // Return an array of EventData or something, I don't know.
         }
 
     }
