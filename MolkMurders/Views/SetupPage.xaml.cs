@@ -17,8 +17,51 @@ public partial class SetupPage : ContentPage
         await Shell.Current.GoToAsync(nameof(GameplayPage), false);
     }
 
-    async void OnEditCharacterButtonClicked(object sender, EventArgs e) {
+	private void OnAddCharacterButtonClicked(object sender, EventArgs e) {
+		BuildCharacterBox();
+	}
 
-    }
+	private void BuildCharacterBox() {
+
+		HorizontalStackLayout stack = new HorizontalStackLayout {
+			Spacing = 10,
+			Children = {
+				new Image {
+					Source="steve.png" // TODO: Add proper character portrait path here.
+				},
+				new VerticalStackLayout {
+					Spacing = 10,
+					Children = {
+						new HorizontalStackLayout {
+							Spacing = 10,
+							Children = {
+								new Entry {
+									Placeholder = "Insert name...",
+									Text = "Some character",
+									WidthRequest = 200,
+									HorizontalOptions = LayoutOptions.Start,
+								},
+								new Button {
+									Text = "Edit Character",
+									HorizontalOptions = LayoutOptions.End,
+									Command = ((SetupPageViewModel)BindingContext).EditCharacterCommand,
+									CommandParameter="WOAH!"
+								}
+							}
+						}
+					}
+				}
+			}
+		};
+
+		Frame frame = new Frame {
+			BackgroundColor = Colors.AliceBlue,
+			HeightRequest=200,
+			VerticalOptions = LayoutOptions.Start,
+			Content = stack
+		};
+
+		characterEntries.Add(frame);
+	}
 
 }
