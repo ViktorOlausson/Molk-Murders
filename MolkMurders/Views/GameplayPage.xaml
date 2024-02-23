@@ -40,7 +40,7 @@
                         </HorizontalStackLayout>
                         <HorizontalStackLayout HorizontalOptions="Center">
                             <!-- Här ska händelsetexten ligga -->
-                            <Grid ColumnDefinitions="400, auto" BackgroundColor="Pink">
+                            <Grid ColumnDefinitions="400, auto">
                                 <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
                                     <Label HorizontalTextAlignment="Center" LineBreakMode="WordWrap" MaxLines="3"
                                    Text="Steve and Baby Steve visit Steve and Baby Steve for dinner. There were no survivors. Oh noooooooooooooooooooooooooo"
