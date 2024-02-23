@@ -6,5 +6,16 @@ using System.Threading.Tasks;
 
 namespace MolkMurdersSystem {
     public class Character {
+
+        CharacterProfile profile = new CharacterProfile(); // TODO: Remove this value.
+
+        enum State {
+            Alive, Dead
+        }
+
+        public Character() {
+
+        }
+
     }
 }
