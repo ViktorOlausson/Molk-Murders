@@ -27,6 +27,8 @@
                  />
                 <Button
                     Text="Exit!!!!!!!!"
+                    x:Name="exit"
+                    Clicked="exitButtonClicked"
                  />
             </VerticalStackLayout>
         </StackLayout>
