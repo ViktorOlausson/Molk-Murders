@@ -5,7 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MolkMurdersSystem {
-    internal class GameRound {
+    public class GameRound {
+        public int Round;
+
+
+        // Generates 
+        public void Generate() {
+            // For each character, do stuff.
+            if (Main.CurrentGame == null) return;
+
+            foreach(Character c in Main.CurrentGame.Characters) {
+
+            }
+        }
 
     }
 }

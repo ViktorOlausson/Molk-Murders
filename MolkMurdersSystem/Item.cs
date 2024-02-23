@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MolkMurdersSystem {
-    public interface IEvent {
-
+    public class Item {
     }
 }
