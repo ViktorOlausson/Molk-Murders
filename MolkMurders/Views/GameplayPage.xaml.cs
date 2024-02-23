@@ -9,11 +9,6 @@ public partial class GameplayPage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 
-		BuildEventBox();
-		BuildEventBox();
-		BuildEventBox();
-		BuildEventBox(); BuildEventBox();
-
 	}
 
 	private void BuildEventBox() {
