@@ -26,10 +26,7 @@
                 <Button
                     Text="Exit!!!!!!!!"
                  />
-                <Button
-                    x:Name="SkillPoints"
-                    Clicked="SkillPoints_Clicked"
-                    Text="Skill points holder"/>
+               
             </VerticalStackLayout>
         </StackLayout>
     </ScrollView>
