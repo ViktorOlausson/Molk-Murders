@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MolkMurders.Views.SetupPage">
+    <Grid ColumnSpacing="10" Padding="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!-- Character pane -->
+        <!--<Frame
+            Grid.Column="0"
+            VerticalOptions="Fill"
+            BackgroundColor="AliceBlue">
+        </Frame>-->
+        <ScrollView
+            VerticalOptions="Start"
+            Grid.Column="0"
+            >
+            <VerticalStackLayout Spacing="10">
+                <!-- Buttons -->
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Load Roster" x:Name="loadRosterButton"/>
+                    <Button Text="Save Roster" x:Name="saveRosterButton"/>
+                </HorizontalStackLayout>
+                <!-- Character Entries -->
+                <VerticalStackLayout Spacing="10"  x:Name="characterEntries">
+                    <Frame
+                    BackgroundColor="AliceBlue"
+                    HeightRequest="200"
+                    VerticalOptions="Start"
+                    >
+                    <!-- Character box content -->
+                    <HorizontalStackLayout Spacing="10">
+                        <Image Source="steve.png"/>
+                        <VerticalStackLayout Spacing="10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Entry
+                                    Placeholder="Insert name..." Text="Steve the mighty"
+                                    WidthRequest="200" HorizontalOptions="Start"
+                                    />
+                                <Button Text="Edit Character"
+                                        HorizontalOptions="End"
+                                        Command="{Binding EditCharacterCommand}"
+                                        CommandParameter="Steeeeeeve"
+                                        />
+
+                            </HorizontalStackLayout>
+                            <!-- TODO: Better style for entries -->
+                            
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Frame>
+                </VerticalStackLayout>
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Add Character" HorizontalOptions="Start" x:Name="addCharacterButton" Clicked="OnAddCharacterButtonClicked"/>
+                    <Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+            
+
+        </ScrollView>
+        <!-- The right side... -->
+        <Frame
+            Grid.Column="1"
+            VerticalOptions="Start"
+            BackgroundColor="AliceBlue"
+            HeightRequest="200"
+            >
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label FontSize="20" Text="Some text could be here." HorizontalOptions="Center"/>
+                <Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

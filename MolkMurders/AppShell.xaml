@@ -6,7 +6,9 @@
     xmlns:local="clr-namespace:MolkMurders"
     Shell.FlyoutBehavior="Disabled"
     Title="MolkMurders">
-
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
     <ShellContent
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />

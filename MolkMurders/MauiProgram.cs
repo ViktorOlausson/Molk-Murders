@@ -19,6 +19,9 @@ namespace MolkMurders
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // Låter oss skriva saker till konsolen
+            builder.Logging.AddDebug();
+
             // ViewModels
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
@@ -28,8 +31,8 @@ namespace MolkMurders
             builder.Services.AddTransient<GameplayPage>();
             builder.Services.AddTransient<GameplayViewModel>();
 
-			//builder.Services.AddTransientPopup<CharacterStatsPopup>();
-			//builder.Services.AddTransientPopup<PopupSkillpointViewModel>();
+            builder.Services.AddSingleton<SetupPage>();
+            builder.Services.AddSingleton<SetupPageViewModel>();
 
 #if DEBUG
 			builder.Logging.AddDebug();
