@@ -37,60 +37,58 @@ public partial class CharacterStatsPopup : Popup
 	}
 	private void PlusBtn_Clicked_iq(object sender, EventArgs e)
 	{
-		if (skillAmountUsed < maxSkillPoint)
-		{
-			iq++;
-			skillAmountUsed++;
-			remainingAmount--;
-			iqPoints.Text = iq.ToString();
-			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
-		}
+		IncreaseSkill(ref iq, ref skillAmountUsed, ref remainingAmount, iqPoints);
 	}
 	private void MinusBtn_Clicked_iq(object sender, EventArgs e)
 	{
-        if (skillAmountUsed > 0 && iq > 0)
-        {
-			iq--;
-			skillAmountUsed--;
-			remainingAmount++;
-			iqPoints.Text = iq.ToString();
-			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
-		}   
+		DecreaseSkill(ref iq, ref skillAmountUsed, ref remainingAmount, iqPoints);
 	}
 
 	private void MinusBtn_Clicked_strength(object sender, EventArgs e)
 	{
-		strength--;
-		Strength.Text = strength.ToString();
+		DecreaseSkill(ref strength, ref skillAmountUsed, ref remainingAmount, Strength);
 	}
 
 	private void PlusBtn_Clicked_strength(object sender, EventArgs e)
 	{
-		strength++;
-		Strength.Text = strength.ToString();
+		IncreaseSkill(ref strength, ref skillAmountUsed, ref remainingAmount, Strength);
 	}
 
 	private void MinusBtn_Clicked_defense(object sender, EventArgs e)
 	{
-		defense--;
-		Defense.Text = defense.ToString();
+		DecreaseSkill(ref defense, ref skillAmountUsed, ref remainingAmount, Defense);
 	}
 
 	private void PlusBtn_Clicked_defense(object sender, EventArgs e)
 	{
-		defense++;
-		Defense.Text = defense.ToString();
+		IncreaseSkill(ref defense, ref skillAmountUsed, ref remainingAmount, Defense);
 	}
 
 	private void MinusBtn_Clicked_agility(object sender, EventArgs e)
 	{
-		agility--;
-		Agility.Text = agility.ToString();
+		DecreaseSkill(ref agility, ref skillAmountUsed, ref remainingAmount, Agility);
 	}
-
 	private void PlusBtn_Clicked_agility(object sender, EventArgs e)
 	{
-		agility++;
-		Agility.Text = agility.ToString();
+		IncreaseSkill(ref agility, ref skillAmountUsed, ref remainingAmount, Agility);
+	}
+	private void DecreaseSkill(ref int skill, ref int skillAmountUsed, ref int remainingAmount, Label skillPointsLabel)
+	{
+		if (skillAmountUsed > 0 && skill > 0) 
+		{
+			skill--;
+			skillAmountUsed--;
+			remainingAmount++;
+			skillPointsLabel.Text = skill.ToString();
+			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		}
+	}
+	private void IncreaseSkill(ref int skill, ref int skillAmountUsed, ref int remainingAmount, Label skillPointsLabel)
+	{
+		skill++;
+		skillAmountUsed++;
+		remainingAmount--;
+		skillPointsLabel.Text = skill.ToString();
+		skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
 	}
 }
