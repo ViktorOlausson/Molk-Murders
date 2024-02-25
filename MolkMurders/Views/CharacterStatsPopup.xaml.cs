@@ -7,26 +7,29 @@ public partial class CharacterStatsPopup : Popup
 {
 	// iqPoints.text
 	// skillPointsAmount
+	// Skills to apply skillpoints to:
 	private int iq = 0;
 	private int strength = 0;
 	private int defense = 0;
 	private int agility = 0;
-	private int maxSkillPoint = 20;
-	private int skillPoint = 0;
 
+	private readonly string avaliblePointsStr = "Tillgängliga poäng: ";
+	private readonly int maxSkillPoint = 20;
+	private int skillAmountUsed = 0;
+	private int remainingAmount = 20;
 	public CharacterStatsPopup()
 	{
 		InitializeComponent();
 		// BindingContext = vm;
-		string pointsToApply = "Tillgängliga poäng: ";
-		// int iq = 0;
-		int skillAmount = 0;
-		int remainingAmount = maxSkillPoint - skillAmount;
-		iqPoints.Text = iq.ToString(); 
+		// Skillpoints text
+		iqPoints.Text = iq.ToString();
 		Strength.Text = strength.ToString();
 		Defense.Text = defense.ToString();
 		Agility.Text = agility.ToString();
-		skillPointsAmount.Text = pointsToApply + remainingAmount.ToString();
+
+		
+		remainingAmount = maxSkillPoint - skillAmountUsed;
+		skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
 	}
 	private void CloseBtn_Clicked(object sender, EventArgs e)
 	{
@@ -34,13 +37,25 @@ public partial class CharacterStatsPopup : Popup
 	}
 	private void PlusBtn_Clicked_iq(object sender, EventArgs e)
 	{
-		iq++;
-		iqPoints.Text = iq.ToString();
+		if (skillAmountUsed < maxSkillPoint)
+		{
+			iq++;
+			skillAmountUsed++;
+			remainingAmount--;
+			iqPoints.Text = iq.ToString();
+			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		}
 	}
 	private void MinusBtn_Clicked_iq(object sender, EventArgs e)
 	{
-		iq--;
-		iqPoints.Text = iq.ToString();
+        if (skillAmountUsed > 0 && iq > 0)
+        {
+			iq--;
+			skillAmountUsed--;
+			remainingAmount++;
+			iqPoints.Text = iq.ToString();
+			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		}   
 	}
 
 	private void MinusBtn_Clicked_strength(object sender, EventArgs e)
