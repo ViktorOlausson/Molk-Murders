@@ -4,7 +4,9 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            x:Class="MolkMurders.Views.CharacterStatsPopup"
            CanBeDismissedByTappingOutsideOfPopup="False"
-           Size="1200, 700">
+           Size="1000, 700"
+           Color="#00FFFFFF">
+    <Frame>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -30,13 +32,10 @@
                 Clicked="CloseBtn_Clicked"
                 VerticalOptions="Center"
                 HorizontalOptions="End"
-                BackgroundColor="Red"
-                BorderColor="Black"
                 BorderWidth="0.4"/>
 
         <!-- Karaktär Header -->
-        <StackLayout Grid.Row="1"
-                     BackgroundColor="DarkOliveGreen">
+        <StackLayout Grid.Row="1">
             <Label x:Name="Karaktär"
                    Text="Karaktär"
                    FontSize="30"
@@ -44,14 +43,26 @@
         </StackLayout>
 
         <!-- Karaktärs anpassning -->
-        <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="Green">
+        
+        <StackLayout Grid.Row="2" Grid.Column="0">
+            <VerticalStackLayout Spacing="20">
+                <ImageButton HeightRequest="400"
+                             WidthRequest="400"/>
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label VerticalTextAlignment="Center"
+                           FontSize="25">
+                        Karaktärens namn: 
+                    </Label>
+                    <Entry x:Name="CharacterName"
+                           WidthRequest="150"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
             <Label Text="Test vänster"/>
         </StackLayout>
 
         <!-- Skill points amount -->
         <StackLayout Grid.Row="1"
-                     Grid.Column="1"
-                     Background="Black">
+                     Grid.Column="1">
             <Label x:Name="skillPointsAmount"
                    Text="Tillgängliga poäng: &lt;skillPoints&gt;"
                    FontSize="30"
@@ -59,7 +70,7 @@
         </StackLayout>
 
         <!-- Skill points modifier sida -->
-        <StackLayout Grid.Row="2" Grid.Column="1" BackgroundColor="Blue">
+        <StackLayout Grid.Row="2" Grid.Column="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
@@ -74,29 +85,18 @@
                     <ColumnDefinition Width="150"/>
                 </Grid.ColumnDefinitions>
 
-
-                <Frame Grid.ColumnSpan="2"
-                       Grid.Row="0"/>
-                <Frame Grid.ColumnSpan="2"
-                       Grid.Row="1"/>
-                <Frame Grid.ColumnSpan="2"
-                       Grid.Row="2"/>
-                <Frame Grid.ColumnSpan="2"
-                       Grid.Row="3"/>
-                <Frame Grid.ColumnSpan="2"
-                       Grid.Row="4"/>
-                
-                <!-- Character Picker -->
+                <!-- Choose weapon-->
                 <StackLayout Grid.Column="0"
                              Grid.ColumnSpan="2"
                              VerticalOptions="Center"
-                             HorizontalOptions="Fill">
+                             HorizontalOptions="Fill"
+                             Padding="5">
                     <Picker x:Name="CharacterPicker"
-                            BackgroundColor="White"
+                            Title="Välj ett vapen"
                             HorizontalOptions="Fill">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
-                                <x:String>Ny</x:String>
+                                <x:String>Svärd</x:String>
                             </x:Array>
                         </Picker.ItemsSource>
                     </Picker>
@@ -215,4 +215,5 @@
             </Grid>
         </StackLayout>
     </Grid>
+    </Frame>
 </mct:Popup>
