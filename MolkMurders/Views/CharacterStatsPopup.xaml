@@ -46,8 +46,9 @@
 
             <StackLayout Grid.Row="2" Grid.Column="0">
                 <VerticalStackLayout Spacing="20">
-                    <ImageButton HeightRequest="400"
-                                 WidthRequest="400"/>
+                    <Image Source="steve.png"
+                           HeightRequest="400"
+                           WidthRequest="400"/>
                     <HorizontalStackLayout HorizontalOptions="Center">
                         <Label VerticalTextAlignment="Center"
                                FontSize="25">

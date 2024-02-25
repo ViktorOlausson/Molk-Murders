@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Views;
 using MolkMurders.ViewModels;
 using System.Diagnostics;
 
@@ -64,4 +65,8 @@ public partial class SetupPage : ContentPage
 		characterEntries.Add(frame);
 	}
 
+	private void SkillPointsPop(object sender, EventArgs e)
+	{
+		this.ShowPopup(new CharacterStatsPopup());
+	}
 }

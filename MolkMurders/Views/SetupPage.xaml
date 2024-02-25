@@ -40,6 +40,7 @@
                                     WidthRequest="200" HorizontalOptions="Start"
                                     />
                                 <Button Text="Edit Character"
+                                        Clicked="SkillPointsPop"
                                         HorizontalOptions="End"
                                         Command="{Binding EditCharacterCommand}"
                                         CommandParameter="Steeeeeeve"
