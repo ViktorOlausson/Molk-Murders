@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using MolkMurders.ViewModels;
 using MolkMurders.Views;
+using MolkMurdersSystem;
 
 namespace MolkMurders
 {
@@ -9,6 +10,10 @@ namespace MolkMurders
     {
         public static MauiApp CreateMauiApp()
         {
+
+            // MÖLK!
+            Main.Init();
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
