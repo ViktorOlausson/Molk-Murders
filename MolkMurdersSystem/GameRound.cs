@@ -17,7 +17,7 @@ namespace MolkMurdersSystem {
             characters.Shuffle(); // Shuffle the list of characters, making the game more fair.
 
             foreach (Character character in characters) {
-                if (character.State == Character.LivingState.Dead) break; // TODO: Make dead characters do simple actions...?
+                if (character.State == Character.LivingState.Dead) continue; // TODO: Make dead characters do simple actions...?
                 List<GameEvent> choosable = new List<GameEvent>();
                 foreach (GameEvent ev in EventRegister.Events) {
                     if (ev.MeetsConditions(character) == true) {
