@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace MolkMurdersSystem {
     public interface IEventCondition {
-        public bool Check();
+        public bool Check(Character character);
     }
 }

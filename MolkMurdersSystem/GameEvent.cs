@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MolkMurdersSystem {
     public abstract class GameEvent {
         // TODO: Make properties out of these
-        public List<IEventCondition> Conditions;
+        public IEventCondition[] Conditions;
         public int Priority;
         public EventType Type;
 
@@ -17,9 +17,7 @@ namespace MolkMurdersSystem {
             ItemPickup
         }
 
-        public GameEvent() {
-
-        }
+        public GameEvent() { }
 
         public virtual EventData Execute(Character character) {
             // This is where logic would go...
@@ -27,6 +25,11 @@ namespace MolkMurdersSystem {
         }
 
         public virtual bool MeetsConditions(Character character) {
+            if (Conditions != null) {
+                foreach (IEventCondition condition in Conditions) {
+                    if (condition.Check(character) == false) return false;
+                }
+            }
             return true;
         }
     }

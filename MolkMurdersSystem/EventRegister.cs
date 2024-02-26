@@ -1,4 +1,5 @@
-﻿using MolkMurdersSystem.GameEvents;
+﻿using MolkMurdersSystem.Conditions;
+using MolkMurdersSystem.GameEvents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,8 @@ namespace MolkMurdersSystem {
             Events.Add(new PlainEvent("%PLAYER1% didn't catch the bus in time and had to wait for another hour."));
             Events.Add(new PlainEvent("%PLAYER1% got stuck in a while loop."));
             Events.Add(new PlainEvent("%PLAYER1% was hanging around all by himself."));
+            Events.Add(new PlainEvent("%PLAYER1% fell down from a plane, landing in this arena.") { Conditions = [new IsFirstRoundCondition()] });
+            Events.Add(new PlainEvent("%PLAYER1% woke up, finding himself in the middle of the arena.") { Conditions = [new IsFirstRoundCondition()] });
         }
 
         // TODO: Function to help add multiple events with the same conditions

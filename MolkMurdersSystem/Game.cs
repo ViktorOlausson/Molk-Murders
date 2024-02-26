@@ -15,6 +15,9 @@ namespace MolkMurdersSystem {
         public Game() {
             Characters.Add(new Character("Dingo")); // Temporary.
             Characters.Add(new Character("Wingo"));
+            Characters.Add(new Character("Tingo"));
+            Characters.Add(new Character("Zingo"));
+            Characters.Add(new Character("Greg"));
         }
 
         public void NewRound() {
