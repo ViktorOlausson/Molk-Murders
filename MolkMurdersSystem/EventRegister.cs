@@ -18,8 +18,19 @@ namespace MolkMurdersSystem {
             Events.Add(new PlainEvent("%PLAYER1% didn't catch the bus in time and had to wait for another hour."));
             Events.Add(new PlainEvent("%PLAYER1% got stuck in a while loop."));
             Events.Add(new PlainEvent("%PLAYER1% was hanging around all by himself."));
+
+            // Condition tests
             Events.Add(new PlainEvent("%PLAYER1% fell down from a plane, landing in this arena.") { Conditions = [new IsFirstRoundCondition()] });
             Events.Add(new PlainEvent("%PLAYER1% woke up, finding himself in the middle of the arena.") { Conditions = [new IsFirstRoundCondition()] });
+
+            // RandomPlainEvent tests
+            Events.Add(new RandomPlainEvent(
+                [
+                    "%PLAYER1% felt kind of random and said \"Zoop!!!\"",
+                    "%PLAYER1% was feeling the randoms and said \"Blingo!!!\"",
+                    "%PLAYER1% knew what he had to do, and said \"Kazoops!!!\"",
+                ]
+                ));
         }
 
         // TODO: Function to help add multiple events with the same conditions
