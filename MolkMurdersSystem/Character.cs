@@ -25,6 +25,10 @@ namespace MolkMurdersSystem {
             profile.Name = name;
         }
 
+        public void Kill() {
+            State = LivingState.Dead;
+        }
+
         /// TODO: Return a fitting image path for the character depending on state.
         public string GetCharacterImagePath() {
             return profile.Path;

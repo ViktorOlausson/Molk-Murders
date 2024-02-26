@@ -5,18 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MolkMurdersSystem.GameEvents {
-    internal class CharacterKillsCharacterEvent : GameEvent {
+    public class TragicAccidentEvent : GameEvent {
 
         private string text = "";
-        public CharacterKillsCharacterEvent(string text) {
+        public TragicAccidentEvent(string text) {
             this.text = text;
         }
 
         public override EventData Execute(Character character) {
-            // TODO.
-            
+            character.Kill(); // :-(
             return new EventData(text, [character]);
         }
-
     }
 }

@@ -31,6 +31,10 @@ namespace MolkMurdersSystem {
                     "%PLAYER1% knew what he had to do, and said \"Kazoops!!!\"",
                 ]
                 ));
+
+            // "Tragic accident" tests
+            Events.Add(new TragicAccidentEvent("%PLAYER1% stubbed his toe and died, violently."));
+
         }
 
         // TODO: Function to help add multiple events with the same conditions
