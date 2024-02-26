@@ -18,6 +18,18 @@ public partial class GameplayPage : ContentPage
     protected override void OnAppearing() {
 		// Load all event boxes by the current round.
 
+
+
+		// Assuming the round has already finished? Maybe do async.
+		if (Main.CurrentGame.Rounds.Count != 0) {
+            foreach (EventData data in MolkMurdersSystem.Main.CurrentGame.Rounds.Last().Events) {
+                BuildEventBox(data);
+				roundLabel.Text = Main.CurrentGame.Rounds.Count.ToString();
+            }
+        }
+		//Content = new Label(Main.CurrentGame.ro);
+		
+
     }
 
     private void BuildEventBox(EventData data) {
@@ -50,10 +62,6 @@ public partial class GameplayPage : ContentPage
                 });
             }
 
-            if (c.HeldItem == null) { // TODO: Make a skull if dead.
-				
-			}
-
             portraits.Children.Add(portrait);
         }
 
@@ -79,4 +87,11 @@ public partial class GameplayPage : ContentPage
 
 		eventsList.Add(frame);
 	}
+
+    async void NextRoundButtonClicked(object sender, EventArgs e) {
+		// Do next round stuff...
+		MolkMurdersSystem.Main.CurrentGame.NewRound();
+
+        await Shell.Current.GoToAsync(nameof(GameplayPage), false);
+    }
 }
