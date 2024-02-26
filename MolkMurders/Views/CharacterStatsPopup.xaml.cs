@@ -43,27 +43,22 @@ public partial class CharacterStatsPopup : Popup
 	{
 		DecreaseSkill(ref iq, ref skillAmountUsed, ref remainingAmount, iqPoints);
 	}
-
 	private void MinusBtn_Clicked_strength(object sender, EventArgs e)
 	{
 		DecreaseSkill(ref strength, ref skillAmountUsed, ref remainingAmount, Strength);
 	}
-
 	private void PlusBtn_Clicked_strength(object sender, EventArgs e)
 	{
 		IncreaseSkill(ref strength, ref skillAmountUsed, ref remainingAmount, Strength);
 	}
-
 	private void MinusBtn_Clicked_defense(object sender, EventArgs e)
 	{
 		DecreaseSkill(ref defense, ref skillAmountUsed, ref remainingAmount, Defense);
 	}
-
 	private void PlusBtn_Clicked_defense(object sender, EventArgs e)
 	{
 		IncreaseSkill(ref defense, ref skillAmountUsed, ref remainingAmount, Defense);
 	}
-
 	private void MinusBtn_Clicked_agility(object sender, EventArgs e)
 	{
 		DecreaseSkill(ref agility, ref skillAmountUsed, ref remainingAmount, Agility);
@@ -85,10 +80,13 @@ public partial class CharacterStatsPopup : Popup
 	}
 	private void IncreaseSkill(ref int skill, ref int skillAmountUsed, ref int remainingAmount, Label skillPointsLabel)
 	{
-		skill++;
-		skillAmountUsed++;
-		remainingAmount--;
-		skillPointsLabel.Text = skill.ToString();
-		skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		if (skillAmountUsed < 20 && skill < 20) 
+		{
+			skill++;
+			skillAmountUsed++;
+			remainingAmount--;
+			skillPointsLabel.Text = skill.ToString();
+			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		}
 	}
 }
