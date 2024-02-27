@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui.Views;
 using MolkMurders.ViewModels;
+using MolkMurdersSystem;
 using System.Diagnostics;
 
 namespace MolkMurders.Views;
@@ -22,16 +23,18 @@ public partial class SetupPage : ContentPage
     }
 
 	private void OnAddCharacterButtonClicked(object sender, EventArgs e) {
-		BuildCharacterBox();
+		CharacterProfile prof = new CharacterProfile();
+		prof.Name = "Dingus";
+		BuildCharacterBox(prof);
 	}
 
-	private void BuildCharacterBox() {
+	private void BuildCharacterBox(CharacterProfile prof) {
 
 		HorizontalStackLayout stack = new HorizontalStackLayout {
 			Spacing = 10,
 			Children = {
 				new Image {
-					Source="steve.png" // TODO: Add proper character portrait path here.
+					Source = prof.Path
 				},
 				new VerticalStackLayout {
 					Spacing = 10,
@@ -41,7 +44,7 @@ public partial class SetupPage : ContentPage
 							Children = {
 								new Entry {
 									Placeholder = "Insert name...",
-									Text = "Some character",
+									Text = prof.Name,
 									WidthRequest = 200,
 									HorizontalOptions = LayoutOptions.Start,
 								},
@@ -49,8 +52,14 @@ public partial class SetupPage : ContentPage
 									Text = "Edit Character",
 									HorizontalOptions = LayoutOptions.End,
 									Command = ((SetupPageViewModel)BindingContext).EditCharacterCommand,
-									CommandParameter="WOAH!"
-								}
+									CommandParameter="0" // TODO: Insert ID here
+								},
+								new Button {
+									Text = "Delete Character",
+									HorizontalOptions = LayoutOptions.End,
+                                    Command = ((SetupPageViewModel)BindingContext).EditCharacterCommand,
+                                    CommandParameter="WOAH!" // TODO: Insert ID here
+                                }
 							}
 						}
 					}
@@ -70,6 +79,8 @@ public partial class SetupPage : ContentPage
 
 	private void SkillPointsPop(object sender, EventArgs e)
 	{
-		this.ShowPopup(new CharacterStatsPopup());
+		//CharacterStatsPopup popup = new CharacterStatsPopup();
+
+		//this.ShowPopup(popup);
 	}
 }

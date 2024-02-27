@@ -17,10 +17,10 @@ public partial class CharacterStatsPopup : Popup
 	private readonly int maxSkillPoint = 20;
 	private int skillAmountUsed = 0;
 	private int remainingAmount = 20;
-	public CharacterStatsPopup()
+	public CharacterStatsPopup(PopupSkillpointViewModel vm)
 	{
 		InitializeComponent();
-		// BindingContext = vm;
+		BindingContext = vm;
 		// Skillpoints text
 		iqPoints.Text = iq.ToString();
 		Strength.Text = strength.ToString();

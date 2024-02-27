@@ -9,6 +9,7 @@ namespace MolkMurders
             InitializeComponent();
             Routing.RegisterRoute(nameof(GameplayPage), typeof(GameplayPage));
             Routing.RegisterRoute(nameof(SetupPage), typeof(SetupPage));
+            Routing.RegisterRoute(nameof(CharacterStatsPopup), typeof(CharacterStatsPopup));
         }
     }
 }

@@ -39,6 +39,8 @@ namespace MolkMurders
             builder.Services.AddSingleton<SetupPage>();
             builder.Services.AddSingleton<SetupPageViewModel>();
 
+            builder.Services.AddTransientPopup<CharacterStatsPopup, PopupSkillpointViewModel>();
+
 #if DEBUG
 			builder.Logging.AddDebug();
 #endif
