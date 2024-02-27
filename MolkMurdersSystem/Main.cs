@@ -14,10 +14,10 @@ namespace MolkMurdersSystem {
             EventRegister.Register();
         }
 
-        public static void StartGame() {
+        public static void StartGame(List<CharacterProfile> profiles) {
             CurrentGame = new Game();
+            CurrentGame.Populate(profiles);
             CurrentGame.NewRound();
-
         }
 
     }

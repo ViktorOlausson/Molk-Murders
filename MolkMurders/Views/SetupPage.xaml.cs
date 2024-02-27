@@ -16,11 +16,13 @@ public partial class SetupPage : ContentPage
 
 	// TODO: Dynamically create new character entries when 
 
+	/*
     async void OnStartButtonClicked(object sender, EventArgs e) {
 		// Start game here.
 		MolkMurdersSystem.Main.StartGame();
         await Shell.Current.GoToAsync(nameof(GameplayPage), false);
     }
+	*/
 
 	private void OnAddCharacterButtonClicked(object sender, EventArgs e) {
 		/*

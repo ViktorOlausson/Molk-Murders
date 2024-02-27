@@ -33,7 +33,7 @@ namespace MolkMurders.ViewModels
 
         private CharacterEntryData? entry;
 
-        public void UpdateStats(CharacterEntryData entry) { // TODO: Pass through character profile...
+        public void UpdateStats(CharacterEntryData entry) {
 			//Trace.WriteLine("This popup was just born!");
             CharacterName = entry.Name;
             this.entry = entry;

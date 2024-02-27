@@ -39,12 +39,29 @@ namespace MolkMurders.ViewModels {
 
         public ICommand AddCharacterCommand => new Command(AddCharacter);
         private void AddCharacter() {
-            Entries.Add(new CharacterEntryData { Name = "Ny karaktär" });
+            Entries.Add(new CharacterEntryData { Name = "Främling" });
         }
 
         public ICommand DeleteCharacterCommand => new Command<CharacterEntryData>(DeleteCharacter);
         private void DeleteCharacter(CharacterEntryData entry) {
             Entries.Remove(entry);
+        }
+
+        public ICommand GameStartCommand => new Command<string>(GameStart);
+
+        async void GameStart(string arg) {
+
+            List<CharacterProfile> profiles = new List<CharacterProfile>();
+
+            foreach (CharacterEntryData entry in Entries) {
+                CharacterProfile profile = new CharacterProfile();
+                profile.Name = entry.Name;
+                profile.Path = entry.ImagePath;
+                profiles.Add(profile);
+            }
+
+            MolkMurdersSystem.Main.StartGame(profiles);
+            await Shell.Current.GoToAsync(nameof(GameplayPage), false);
         }
 
     }

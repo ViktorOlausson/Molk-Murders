@@ -56,6 +56,9 @@
                                             />
 
                                         </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label Text="{Binding StatsText}"/>
+                                        </HorizontalStackLayout>
                                     </VerticalStackLayout>
                                 </HorizontalStackLayout>
                             </Frame>
@@ -80,7 +83,8 @@
             >
             <VerticalStackLayout VerticalOptions="Center">
                 <Label FontSize="20" Text="Some text could be here." HorizontalOptions="Center"/>
-                <Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>
+                <!--<Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>-->
+                <Button Text="Start!" Command="{Binding GameStartCommand}"/>
             </VerticalStackLayout>
         </Frame>
     </Grid>

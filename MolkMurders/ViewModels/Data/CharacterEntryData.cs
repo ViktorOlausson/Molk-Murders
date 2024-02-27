@@ -22,5 +22,20 @@ namespace MolkMurders.ViewModels.Data {
                 OnPropertyChanged(nameof(ImagePath));
             }
         }
+
+        private string statsText = "IQ: 0 - STR: 0 - DEF: 0 - AGI: 0";
+        public string StatsText {
+            get => statsText;
+            set {
+                statsText = value;
+                OnPropertyChanged(nameof(StatsText));
+            }
+        }
+
+        public int IQ = 0;
+        public int STR = 0;
+        public int DEF = 0;
+        public int AGI = 0;
+
     }
 }
