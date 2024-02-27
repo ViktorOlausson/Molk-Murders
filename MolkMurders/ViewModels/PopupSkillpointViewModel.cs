@@ -29,6 +29,28 @@ namespace MolkMurders.ViewModels
             }
         }
 
+        // Time for repetitive code #DRY
+        private int iq = 0;
+        private int str = 0;
+        private int def = 0;
+        private int agi = 0;
+        public int IQ {
+            get { return iq; }
+            set { if (iq != value) { iq = value; OnPropertyChanged(); if (entry != null) entry.IQ = value; } }
+        }
+        public int STR {
+            get { return str; }
+            set { if (str != value) { str = value; OnPropertyChanged(); } }
+        }
+        public int DEF {
+            get { return def; }
+            set { if (def != value) { def = value; OnPropertyChanged(); } }
+        }
+        public int AGI {
+            get { return agi; }
+            set { if (agi != value) { agi = value; OnPropertyChanged(); } }
+        }
+
         public PopupSkillpointViewModel() { }
 
         private CharacterEntryData? entry;
@@ -36,8 +58,11 @@ namespace MolkMurders.ViewModels
         public void UpdateStats(CharacterEntryData entry) {
 			//Trace.WriteLine("This popup was just born!");
             CharacterName = entry.Name;
+            IQ = entry.IQ; STR = entry.STR; DEF = entry.DEF; AGI = entry.AGI;
             this.entry = entry;
         }
+
+
 
 	}
 }

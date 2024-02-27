@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace MolkMurders.ViewModels.Data {
     public class CharacterEntryData : BindableObject {
         private string name = "Steve";
+
+        public int AvailablePoints { get; set; }
+
         public string Name {
             get => name;
             set {
@@ -36,6 +39,10 @@ namespace MolkMurders.ViewModels.Data {
         public int STR = 0;
         public int DEF = 0;
         public int AGI = 0;
+
+        public void SetStatsText() {
+            StatsText = $"IQ: {IQ} - STR: {STR} - DEF: {DEF} - AGI: {AGI}";
+        }
 
     }
 }
