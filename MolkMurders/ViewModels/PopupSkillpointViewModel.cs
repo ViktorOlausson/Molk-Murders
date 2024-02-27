@@ -30,7 +30,7 @@ namespace MolkMurders.ViewModels
             //CharacterName = "Heck"; // Funkar
         }
 
-        public void UpdateStats(CharacterProfile profile) { // TODO: Pass through character profile...
+        public void UpdateStats() { // TODO: Pass through character profile...
 			Trace.WriteLine("This popup was just born!");
             CharacterName = "It works!";
         }

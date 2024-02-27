@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MolkMurders.Views.SetupPage">
+             x:Class="MolkMurders.Views.SetupPage"
+             xmlns:local="clr-namespace:MolkMurders.Views"
+             >
     <Grid ColumnSpacing="10" Padding="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -44,8 +46,8 @@
                                                 />
                                         <Button Text="Edit Character"
                                             HorizontalOptions="End"
-                                            Command="{Binding EditCharacterCommand}"
-                                            CommandParameter="0"
+                                            Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.EditCharacterCommand}"
+                                            CommandParameter="{Binding .}"
                                             />
                                         <Button Text="Delete Character"
                                                     HorizontalOptions="End"

@@ -16,23 +16,22 @@ using System.Windows.Input;
 namespace MolkMurders.ViewModels {
     public partial class SetupPageViewModel : ObservableObject {
 
-        public ICommand EditCharacterCommand { get; private set; }
+        public ICommand EditCharacterCommand => new Command<CharacterEntryData>(EditCharacter);
         public ICommand DeleteCharacterCommand { get; private set; }
 
         public SetupPageViewModel(IPopupService popupService) {
-            EditCharacterCommand = new Command<string>(EditCharacter);
             DeleteCharacterCommand = new Command<string>(DeleteCharacter);
             this.popupService = popupService;
         }
 
         private readonly IPopupService popupService;
 
-        private void EditCharacter(string parameter) {
-            Trace.WriteLine($"Den här knappen har en parameter, och den är {parameter}!");
-            CharacterProfile chosen_profile = Profiles[Int32.Parse(parameter)];
+        private void EditCharacter(CharacterEntryData entry) {
+            //Trace.WriteLine($"Den här knappen har en parameter, och den är {parameter}!");
+            //CharacterProfile chosen_profile = Profiles[Int32.Parse(parameter)];
 
             this.popupService.ShowPopup<PopupSkillpointViewModel>(
-                onPresenting: viewModel => viewModel.UpdateStats(chosen_profile)
+                onPresenting: viewModel => viewModel.UpdateStats()
                 );
         }
 
@@ -52,7 +51,7 @@ namespace MolkMurders.ViewModels {
         public ICommand AddCharacterCommand => new Command(AddCharacter);
 
         private void AddCharacter() {
-            Entries.Add(new CharacterEntryData { Name = "Test" });
+            Entries.Add(new CharacterEntryData { Name = "Ny karaktär" });
         }
 
     }
