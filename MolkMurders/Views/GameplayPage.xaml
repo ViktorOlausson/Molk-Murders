@@ -49,6 +49,8 @@
                 </Frame>-->
             </VerticalStackLayout>
         </ScrollView>
-        
+        <Button Text="Next Round"
+            Grid.Column="2" HeightRequest="30" Clicked="NextRoundButtonClicked" VerticalOptions="Start"/>
+        <Label Grid.Column="0" Text="Round 0" x:Name="roundLabel" VerticalOptions="Start"/>
     </Grid>
 </ContentPage>
