@@ -24,7 +24,7 @@
                     <Button Text="Save Roster" x:Name="saveRosterButton"/>
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
-                <VerticalStackLayout Spacing="10"  x:Name="characterEntries" BindableLayout.ItemsSource="{Binding Frames}">
+                <VerticalStackLayout Spacing="10"  x:Name="characterEntries" BindableLayout.ItemsSource="{Binding Entries}">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Frame
@@ -36,16 +36,20 @@
                                     <Image Source="steve.png"/>
                                     <VerticalStackLayout Spacing="10">
                                         <HorizontalStackLayout Spacing="10">
-                                            <Entry
-                                    Placeholder="Insert name..." Text="Steve the mighty"
-                                    WidthRequest="200" HorizontalOptions="Start"
-                                    />
-                                            <Button Text="Edit Character"
-                                        Clicked="SkillPointsPop"
-                                        HorizontalOptions="End"
-                                        Command="{Binding EditCharacterCommand}"
-                                        CommandParameter="Steeeeeeve"
-                                        />
+                                            <Label
+                                                Text="{Binding Name}"
+                                                WidthRequest="200"
+                                                FontSize="20"
+                                                HorizontalOptions="Start" VerticalOptions="Center"
+                                                />
+                                        <Button Text="Edit Character"
+                                            HorizontalOptions="End"
+                                            Command="{Binding EditCharacterCommand}"
+                                            CommandParameter="0"
+                                            />
+                                        <Button Text="Delete Character"
+                                                    HorizontalOptions="End"
+                                                />
 
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>

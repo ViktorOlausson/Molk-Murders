@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
+using MolkMurders.ViewModels.Data;
 using MolkMurders.Views;
 using MolkMurdersSystem;
 using System;
@@ -42,16 +43,16 @@ namespace MolkMurders.ViewModels {
 
         public static List<CharacterProfile> Profiles = new List<CharacterProfile>();
 
-        private ObservableCollection<Frame> frames = new ObservableCollection<Frame>();
-        public ObservableCollection<Frame> Frames { get => frames; set {
-                frames = value;
-                OnPropertyChanged();
+        private ObservableCollection<CharacterEntryData> entries = new ObservableCollection<CharacterEntryData>();
+        public ObservableCollection<CharacterEntryData> Entries { get => entries; set {
+                entries = value;
+                OnPropertyChanged(nameof(Entries));
             } }
 
         public ICommand AddCharacterCommand => new Command(AddCharacter);
 
         private void AddCharacter() {
-            Frames.Add(new Frame());
+            Entries.Add(new CharacterEntryData { Name = "Test" });
         }
 
     }
