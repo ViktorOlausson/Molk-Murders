@@ -4,6 +4,7 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            x:Class="MolkMurders.Views.CharacterStatsPopup"
            CanBeDismissedByTappingOutsideOfPopup="False"
+           xmlns:local="clr-namespace:MolkMurders.Views"
            Size="1000, 700"
            Color="#00FFFFFF">
     <Frame>
@@ -66,7 +67,7 @@
             <StackLayout Grid.Row="1"
                          Grid.Column="1">
                 <Label x:Name="skillPointsAmount"
-                       Text="Tillgängliga poäng: &lt;skillPoints&gt;"
+                       Text="{Binding AvailablePoints, StringFormat='Tillgängliga poäng: {0}'}"
                        FontSize="30"
                        HorizontalOptions="Center"/>
             </StackLayout>
@@ -115,11 +116,12 @@
                                            Spacing="20">
                         <Button x:Name="MinusBtniq"
                                 Text="-"
-                                Clicked="MinusBtn_Clicked_iq"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="-iq"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
-                        <Label Text="Amount points"
+                        <Label Text="{Binding IQ}"
                                 x:Name="iqPoints"
                                 VerticalTextAlignment="Center"
                                 HorizontalTextAlignment="Center"
@@ -127,7 +129,8 @@
                                 WidthRequest="30"/>
                         <Button x:Name="PlusBtniq"
                                 Text="+"
-                                Clicked="PlusBtn_Clicked_iq"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="+iq"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
@@ -145,11 +148,12 @@
                                            Spacing="20">
                         <Button x:Name="MinusBtnStrength"
                                 Text="-"
-                                Clicked="MinusBtn_Clicked_strength"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="-str"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
-                        <Label Text="Amount points"
+                        <Label Text="{Binding STR}"
                                x:Name="Strength"
                                VerticalTextAlignment="Center"
                                HorizontalTextAlignment="Center"
@@ -157,7 +161,8 @@
                                WidthRequest="30"/>
                         <Button x:Name="PlusBtnStrength"
                                 Text="+"
-                                Clicked="PlusBtn_Clicked_strength"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="+str"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
@@ -175,11 +180,12 @@
                                            Spacing="20">
                         <Button x:Name="MinusBtnDefense"
                                 Text="-"
-                                Clicked="MinusBtn_Clicked_defense"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="-def"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
-                        <Label Text="Amount points"
+                        <Label Text="{Binding DEF}"
                                x:Name="Defense"
                                VerticalTextAlignment="Center"
                                HorizontalTextAlignment="Center"
@@ -187,7 +193,8 @@
                                WidthRequest="30"/>
                         <Button x:Name="PlusBtnDefense"
                                 Text="+"
-                                Clicked="PlusBtn_Clicked_defense"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="+def"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
@@ -205,11 +212,12 @@
                                            Spacing="20">
                         <Button x:Name="MinusBtnAgility"
                                 Text="-"
-                                Clicked="MinusBtn_Clicked_agility"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="-agi"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>
-                        <Label Text="Amount points"
+                        <Label Text="{Binding AGI}"
                                x:Name="Agility"
                                VerticalTextAlignment="Center"
                                HorizontalTextAlignment="Center"
@@ -217,7 +225,8 @@
                                WidthRequest="30"/>
                         <Button x:Name="PlusBtnAgility"
                                 Text="+"
-                                Clicked="PlusBtn_Clicked_agility"
+                                Command="{Binding ChangePointsCommand}"
+                                CommandParameter="+agi"
                                 HeightRequest="40"
                                 WidthRequest="40"
                                 FontSize="25"/>

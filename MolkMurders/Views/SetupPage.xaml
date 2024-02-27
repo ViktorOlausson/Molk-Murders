@@ -57,7 +57,16 @@
 
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
-                                            <Label Text="{Binding StatsText}"/>
+                                            <Label>
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}IQ: {0} - STR: {1} - DEF: {2} - AGI: {3}">
+                                                        <Binding Path="IQ"/>
+                                                        <Binding Path="STR"/>
+                                                        <Binding Path="DEF"/>
+                                                        <Binding Path="AGI"/>
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
                                 </HorizontalStackLayout>

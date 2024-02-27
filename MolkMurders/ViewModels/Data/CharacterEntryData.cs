@@ -8,7 +8,8 @@ namespace MolkMurders.ViewModels.Data {
     public class CharacterEntryData : BindableObject {
         private string name = "Steve";
 
-        public int AvailablePoints { get; set; }
+        private int availablePoints = 20;
+        public int AvailablePoints { get => availablePoints; set { availablePoints = value; } }
 
         public string Name {
             get => name;
@@ -26,22 +27,48 @@ namespace MolkMurders.ViewModels.Data {
             }
         }
 
-        private string statsText = "IQ: 0 - STR: 0 - DEF: 0 - AGI: 0";
-        public string StatsText {
-            get => statsText;
+        private int iq;
+        public int IQ {
+            get => iq;
             set {
-                statsText = value;
-                OnPropertyChanged(nameof(StatsText));
+                if (iq != value) {
+                    iq = value;
+                    OnPropertyChanged();
+                }
             }
         }
 
-        public int IQ = 0;
-        public int STR = 0;
-        public int DEF = 0;
-        public int AGI = 0;
+        private int str;
+        public int STR {
+            get => str;
+            set {
+                if (str != value) {
+                    str = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
-        public void SetStatsText() {
-            StatsText = $"IQ: {IQ} - STR: {STR} - DEF: {DEF} - AGI: {AGI}";
+        private int def;
+        public int DEF {
+            get => def;
+            set {
+                if (def != value) {
+                    def = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        private int agi;
+        public int AGI {
+            get => agi;
+            set {
+                if (agi != value) {
+                    agi = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
     }

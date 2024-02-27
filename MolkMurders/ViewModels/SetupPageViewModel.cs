@@ -57,6 +57,12 @@ namespace MolkMurders.ViewModels {
                 CharacterProfile profile = new CharacterProfile();
                 profile.Name = entry.Name;
                 profile.Path = entry.ImagePath;
+
+                profile.Iq = entry.IQ;
+                profile.Strength = entry.STR;
+                profile.Defense = entry.DEF;
+                profile.Agility = entry.AGI;
+
                 profiles.Add(profile);
             }
 

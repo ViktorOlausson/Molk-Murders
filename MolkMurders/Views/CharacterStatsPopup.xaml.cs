@@ -22,14 +22,14 @@ public partial class CharacterStatsPopup : Popup
 		InitializeComponent();
 		BindingContext = vm;
 		// Skillpoints text
-		iqPoints.Text = iq.ToString();
-		Strength.Text = strength.ToString();
-		Defense.Text = defense.ToString();
-		Agility.Text = agility.ToString();
+		//iqPoints.Text = iq.ToString();
+		//Strength.Text = strength.ToString();
+		//Defense.Text = defense.ToString();
+		//Agility.Text = agility.ToString();
 
 		
-		remainingAmount = maxSkillPoint - skillAmountUsed;
-		skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+		//remainingAmount = maxSkillPoint - skillAmountUsed;
+		//skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
 	}
 	private void CloseBtn_Clicked(object sender, EventArgs e)
 	{
@@ -75,7 +75,7 @@ public partial class CharacterStatsPopup : Popup
 			skillAmountUsed--;
 			remainingAmount++;
 			skillPointsLabel.Text = skill.ToString();
-			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+			//skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
 		}
 	}
 	private void IncreaseSkill(ref int skill, ref int skillAmountUsed, ref int remainingAmount, Label skillPointsLabel)
@@ -86,7 +86,7 @@ public partial class CharacterStatsPopup : Popup
 			skillAmountUsed++;
 			remainingAmount--;
 			skillPointsLabel.Text = skill.ToString();
-			skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
+			//skillPointsAmount.Text = avaliblePointsStr + remainingAmount.ToString();
 		}
 	}
 }
