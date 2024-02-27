@@ -5,6 +5,7 @@ using MolkMurders.Views;
 using MolkMurdersSystem;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -35,10 +36,23 @@ namespace MolkMurders.ViewModels {
         }
 
         private void DeleteCharacter(string parameter) {
-
+            //Trace.WriteLine(nameof(Shell.Current.BindingContext));
+            ((SetupPage)Shell.Current.BindingContext).Content = new HorizontalStackLayout();
         }
 
         public static List<CharacterProfile> Profiles = new List<CharacterProfile>();
+
+        private ObservableCollection<Frame> frames = new ObservableCollection<Frame>();
+        public ObservableCollection<Frame> Frames { get => frames; set {
+                frames = value;
+                OnPropertyChanged();
+            } }
+
+        public ICommand AddCharacterCommand => new Command(AddCharacter);
+
+        private void AddCharacter() {
+            Frames.Add(new Frame());
+        }
 
     }
 }

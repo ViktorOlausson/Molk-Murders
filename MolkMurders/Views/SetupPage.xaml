@@ -24,35 +24,39 @@
                     <Button Text="Save Roster" x:Name="saveRosterButton"/>
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
-                <VerticalStackLayout Spacing="10"  x:Name="characterEntries">
-                    <!--<Frame
-                    BackgroundColor="AliceBlue"
-                    HeightRequest="200"
-                    VerticalOptions="Start"
-                    >
-                    --><!-- Character box content --><!--
-                    <HorizontalStackLayout Spacing="10">
-                        <Image Source="steve.png"/>
-                        <VerticalStackLayout Spacing="10">
+                <VerticalStackLayout Spacing="10"  x:Name="characterEntries" BindableLayout.ItemsSource="{Binding Frames}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                BackgroundColor="AliceBlue"
+                                HeightRequest="200"
+                                VerticalOptions="Start"
+                                >
+                                <!-- Character box content -->
                                 <HorizontalStackLayout Spacing="10">
-                                    <Entry
+                                    <Image Source="steve.png"/>
+                                    <VerticalStackLayout Spacing="10">
+                                        <HorizontalStackLayout Spacing="10">
+                                            <Entry
                                     Placeholder="Insert name..." Text="Steve the mighty"
                                     WidthRequest="200" HorizontalOptions="Start"
                                     />
-                                    <Button Text="Edit Character"
+                                            <Button Text="Edit Character"
                                         Clicked="SkillPointsPop"
                                         HorizontalOptions="End"
                                         Command="{Binding EditCharacterCommand}"
                                         CommandParameter="Steeeeeeve"
                                         />
 
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
                                 </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Frame>-->
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Add Character" HorizontalOptions="Start" x:Name="addCharacterButton" Clicked="OnAddCharacterButtonClicked"/>
+                    <Button Text="Add Character" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
                     <Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
