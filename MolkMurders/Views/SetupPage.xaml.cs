@@ -25,6 +25,7 @@ public partial class SetupPage : ContentPage
 	private void OnAddCharacterButtonClicked(object sender, EventArgs e) {
 		CharacterProfile prof = new CharacterProfile();
 		prof.Name = "Dingus";
+		SetupPageViewModel.Profiles.Add(prof);
 		BuildCharacterBox(prof);
 	}
 

@@ -12,6 +12,8 @@ namespace MolkMurdersSystem.Helpers {
         /// </summary>
         public static string CharacterFormat(string str, EventData data) {
             // TODO
+
+            // ALSO TODO: If name is empty, make the name value "some guy" or similar
             return str;
         }
 

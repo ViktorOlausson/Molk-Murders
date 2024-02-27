@@ -55,7 +55,9 @@
                             Karaktärens namn:
                         </Label>
                         <Entry x:Name="CharacterName"
-                               WidthRequest="150"/>
+                               WidthRequest="150"
+                               Text="{Binding CharacterName}"
+                               />
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </StackLayout>
