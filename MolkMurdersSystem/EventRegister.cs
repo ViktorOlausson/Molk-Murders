@@ -33,7 +33,13 @@ namespace MolkMurdersSystem {
                 ));
 
             // "Tragic accident" tests
-            Events.Add(new TragicAccidentEvent("%PLAYER1% stubbed his toe and died, violently."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Slog i tån och dog, våldsamt."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Blev hotad med kniv av %PLAYER1%, ramlade och bröt nacken."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Trampade på en landmina, woops."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Försökte jonglera motorsågar, gick inte riktigt som planerat."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Fick trots extrema odds en meteor i skallen."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Ville praktiskt lära sig hur seppuku gick till."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Försökte lära sig hur doxygen fungerar."));
 
         }
 

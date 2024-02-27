@@ -21,7 +21,7 @@
             <!-- Top fliken -->
             <Label Grid.Row="0"
                    Grid.ColumnSpan="2"
-                   Text="Karaktärs anpassning"
+                   Text="Karaktärsanpassning"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    FontSize="30"/>
@@ -40,6 +40,7 @@
                        Text="Karaktär"
                        FontSize="30"
                        HorizontalOptions="Center"/>
+
             </StackLayout>
 
             <!-- Karaktärs anpassning -->
