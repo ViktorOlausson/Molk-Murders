@@ -28,7 +28,6 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <Frame
-                                BackgroundColor="AliceBlue"
                                 HeightRequest="200"
                                 VerticalOptions="Start"
                                 >
