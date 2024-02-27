@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MolkMurders.ViewModels.Data;
 using MolkMurdersSystem;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace MolkMurders.ViewModels
 	public partial class PopupSkillpointViewModel : ObservableObject
 	{
 
-        private string name;
+        private string name = "Steve";
 
         public string CharacterName {
             get { return name; }
@@ -21,18 +22,21 @@ namespace MolkMurders.ViewModels
                 if (name != value) {
                     name = value;
                     OnPropertyChanged(nameof(CharacterName));
+                    if (entry != null) {
+                        entry.Name = value;
+                    }
                 }
             }
         }
 
-        public PopupSkillpointViewModel()
-		{
-            //CharacterName = "Heck"; // Funkar
-        }
+        public PopupSkillpointViewModel() { }
 
-        public void UpdateStats() { // TODO: Pass through character profile...
-			Trace.WriteLine("This popup was just born!");
-            CharacterName = "It works!";
+        private CharacterEntryData? entry;
+
+        public void UpdateStats(CharacterEntryData entry) { // TODO: Pass through character profile...
+			//Trace.WriteLine("This popup was just born!");
+            CharacterName = entry.Name;
+            this.entry = entry;
         }
 
 	}

@@ -25,11 +25,9 @@ namespace MolkMurders.ViewModels {
         private readonly IPopupService popupService;
 
         private void EditCharacter(CharacterEntryData entry) {
-            //Trace.WriteLine($"Den här knappen har en parameter, och den är {parameter}!");
-            //CharacterProfile chosen_profile = Profiles[Int32.Parse(parameter)];
 
             this.popupService.ShowPopup<PopupSkillpointViewModel>(
-                onPresenting: viewModel => viewModel.UpdateStats()
+                onPresenting: viewModel => viewModel.UpdateStats(entry)
                 );
         }
 
