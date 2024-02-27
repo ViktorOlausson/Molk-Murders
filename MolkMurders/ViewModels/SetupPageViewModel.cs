@@ -17,10 +17,8 @@ namespace MolkMurders.ViewModels {
     public partial class SetupPageViewModel : ObservableObject {
 
         public ICommand EditCharacterCommand => new Command<CharacterEntryData>(EditCharacter);
-        public ICommand DeleteCharacterCommand { get; private set; }
 
         public SetupPageViewModel(IPopupService popupService) {
-            DeleteCharacterCommand = new Command<string>(DeleteCharacter);
             this.popupService = popupService;
         }
 
@@ -35,13 +33,6 @@ namespace MolkMurders.ViewModels {
                 );
         }
 
-        private void DeleteCharacter(string parameter) {
-            //Trace.WriteLine(nameof(Shell.Current.BindingContext));
-            ((SetupPage)Shell.Current.BindingContext).Content = new HorizontalStackLayout();
-        }
-
-        public static List<CharacterProfile> Profiles = new List<CharacterProfile>();
-
         private ObservableCollection<CharacterEntryData> entries = new ObservableCollection<CharacterEntryData>();
         public ObservableCollection<CharacterEntryData> Entries { get => entries; set {
                 entries = value;
@@ -49,9 +40,13 @@ namespace MolkMurders.ViewModels {
             } }
 
         public ICommand AddCharacterCommand => new Command(AddCharacter);
-
         private void AddCharacter() {
             Entries.Add(new CharacterEntryData { Name = "Ny karaktär" });
+        }
+
+        public ICommand DeleteCharacterCommand => new Command<CharacterEntryData>(DeleteCharacter);
+        private void DeleteCharacter(CharacterEntryData entry) {
+            Entries.Remove(entry);
         }
 
     }

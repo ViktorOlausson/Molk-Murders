@@ -50,8 +50,10 @@
                                             CommandParameter="{Binding .}"
                                             />
                                         <Button Text="Delete Character"
-                                                    HorizontalOptions="End"
-                                                />
+                                            HorizontalOptions="End"
+                                                Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.DeleteCharacterCommand}"
+                                                CommandParameter="{Binding .}"
+                                            />
 
                                         </HorizontalStackLayout>
                                     </VerticalStackLayout>
