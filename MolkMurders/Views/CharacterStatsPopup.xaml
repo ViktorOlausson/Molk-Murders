@@ -46,16 +46,21 @@
 
             <StackLayout Grid.Row="2" Grid.Column="0">
                 <VerticalStackLayout Spacing="20">
-                    <Image Source="steve.png"
-                           HeightRequest="400"
-                           WidthRequest="400"/>
+                    <ImageButton x:Name="ProfilePictureButton"
+                     HeightRequest="400"
+                     WidthRequest="400"
+                     Clicked="ProfilePictureButton_Clicked">
+                        <ImageButton.Source>
+                            <FileImageSource File="steve.png" />
+                        </ImageButton.Source>
+                    </ImageButton>
                     <HorizontalStackLayout HorizontalOptions="Center">
                         <Label VerticalTextAlignment="Center"
-                               FontSize="25">
+                   FontSize="25">
                             Karaktärens namn:
                         </Label>
                         <Entry x:Name="CharacterName"
-                               WidthRequest="150"/>
+                   WidthRequest="150"/>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </StackLayout>
