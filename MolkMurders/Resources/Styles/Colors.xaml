@@ -13,6 +13,17 @@
     <Color x:Key="SecondaryDarkText">#9880e5</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>
 
+    <!-- Custom Palette Dark mode -->
+    <Color x:Key="Green400">#00897B</Color>
+    <Color x:Key="DeepPurple500">#673AB7</Color>
+    <Color x:Key="3">#2B0B98</Color>
+    <Color x:Key="4">#2B0B98</Color>
+    <Color x:Key="5">#2B0B98</Color>
+    
+    
+    
+    
+
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
     <Color x:Key="Magenta">#D600AA</Color>
