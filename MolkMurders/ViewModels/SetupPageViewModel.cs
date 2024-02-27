@@ -15,9 +15,11 @@ namespace MolkMurders.ViewModels {
     public partial class SetupPageViewModel : ObservableObject {
 
         public ICommand EditCharacterCommand { get; private set; }
-        
+        public ICommand DeleteCharacterCommand { get; private set; }
+
         public SetupPageViewModel(IPopupService popupService) {
             EditCharacterCommand = new Command<string>(EditCharacter);
+            DeleteCharacterCommand = new Command<string>(DeleteCharacter);
             this.popupService = popupService;
         }
 
@@ -30,6 +32,10 @@ namespace MolkMurders.ViewModels {
             this.popupService.ShowPopup<PopupSkillpointViewModel>(
                 onPresenting: viewModel => viewModel.UpdateStats(chosen_profile)
                 );
+        }
+
+        private void DeleteCharacter(string parameter) {
+
         }
 
         public static List<CharacterProfile> Profiles = new List<CharacterProfile>();

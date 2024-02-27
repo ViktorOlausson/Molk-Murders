@@ -58,7 +58,7 @@ public partial class SetupPage : ContentPage
 								new Button {
 									Text = "Delete Character",
 									HorizontalOptions = LayoutOptions.End,
-                                    Command = ((SetupPageViewModel)BindingContext).EditCharacterCommand,
+                                    Command = ((SetupPageViewModel)BindingContext).DeleteCharacterCommand,
                                     CommandParameter="WOAH!" // TODO: Insert ID here
                                 }
 							}
