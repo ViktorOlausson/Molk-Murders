@@ -11,6 +11,8 @@
             <Button
                 Text="Settings"
                 HorizontalOptions="Start"
+                x:Name="settingsButton"
+                Clicked="settingsButtonClicked"
                 />
 
             <VerticalStackLayout Margin="20"
@@ -25,6 +27,8 @@
                  />
                 <Button
                     Text="Exit!!!!!!!!"
+                    x:Name="exit"
+                    Clicked="exitButtonClicked"
                  />
             </VerticalStackLayout>
         </StackLayout>

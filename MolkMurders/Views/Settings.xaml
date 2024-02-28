@@ -5,15 +5,34 @@
            x:Class="MolkMurders.Views.Settings"
            CanBeDismissedByTappingOutsideOfPopup="False">
     <VerticalStackLayout>
-        <Button 
+        
+        <Button Margin="10"
             x:Name="CloseBtn"
-            Text="X"
+            Text="Close"
+            
             Clicked="CloseBtn_Clicked"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"/>
-        <Label 
+            HorizontalOptions="Start"
+            VerticalOptions="Center"/>
+        <Label
+            TextColor="Black"
+            Margin="20"
             Text="Settings"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Grid BackgroundColor="Purple" MinimumWidthRequest="1000" MinimumHeightRequest="500" HorizontalOptions="Center" 
+              VerticalOptions="Center">
+            
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                <!--<Label Margin="20" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White"
+                Text="Här kommer det komma inställningar för bland annat musik"/>-->
+
+                <Grid>
+                    <Label BackgroundColor="Red" Text="Music: ">
+                    </Label>
+                    <Switch BackgroundColor="Orange"></Switch>
+                </Grid>
+
+            </VerticalStackLayout>
+        </Grid>
     </VerticalStackLayout>
 </mct:Popup>

@@ -87,7 +87,6 @@
         <Frame
             Grid.Column="1"
             VerticalOptions="Start"
-            BackgroundColor="AliceBlue"
             HeightRequest="200"
             >
             <VerticalStackLayout VerticalOptions="Center">

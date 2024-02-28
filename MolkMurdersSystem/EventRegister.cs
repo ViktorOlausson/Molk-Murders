@@ -13,27 +13,44 @@ namespace MolkMurdersSystem {
 
         public static void Register() {
             // It would also be possible to make the text inside PlainEvent completely random. Priority would still matter.
-            Events.Add(new PlainEvent("%PLAYER1% was hanging around all by himself."));
-            Events.Add(new PlainEvent("%PLAYER1% got lost in the woods for 2 hours."));
-            Events.Add(new PlainEvent("%PLAYER1% didn't catch the bus in time and had to wait for another hour."));
-            Events.Add(new PlainEvent("%PLAYER1% got stuck in a while loop."));
-            Events.Add(new PlainEvent("%PLAYER1% was hanging around all by himself."));
+            Events.Add(new PlainEvent("%PLAYER1% Gick vilse i skogen i exakt två timmar."));
+            Events.Add(new PlainEvent("%PLAYER1% Missade bussen precis och fick vänta en timme."));
+            Events.Add(new PlainEvent("%PLAYER1% Fastnade i en while loop."));
+            Events.Add(new PlainEvent("%PLAYER1% Stod mest omkring alldeles ensam."));
+            Events.Add(new PlainEvent("%PLAYER1% Fastnade hos optikern."));
+            Events.Add(new PlainEvent("%PLAYER1% Trasslade in sig i sina hörlurskablar och kunde inte komma loss."));
+            Events.Add(new PlainEvent("%PLAYER1% Ville hellre lära sig ett nytt språk, danska kanske?."));
+            Events.Add(new PlainEvent("%PLAYER1% Sprang och gömde sig i en buske."));
+            Events.Add(new PlainEvent("%PLAYER1% Fick en snilleblixt."));
+            Events.Add(new PlainEvent("%PLAYER1% Fick en tindermatchning och sprang på date istället."));
+            Events.Add(new PlainEvent("%PLAYER1% Blev arg och hungrig på samma gång"));
+
 
             // Condition tests
-            Events.Add(new PlainEvent("%PLAYER1% fell down from a plane, landing in this arena.") { Conditions = [new IsFirstRoundCondition()] });
-            Events.Add(new PlainEvent("%PLAYER1% woke up, finding himself in the middle of the arena.") { Conditions = [new IsFirstRoundCondition()] });
+            Events.Add(new PlainEvent("%PLAYER1% Hoppade ner från ett flygplan och hamnade på arenan.") { Conditions = [new IsFirstRoundCondition()] });
+            Events.Add(new PlainEvent("%PLAYER1% Vaknade och fann sig själv i mitten av arenan.") { Conditions = [new IsFirstRoundCondition()] });
+            Events.Add(new PlainEvent("%PLAYER1% Använde sig av en uråldrig besvärjelse och hamnade på arenan.") { Conditions = [new IsFirstRoundCondition()] });
+            Events.Add(new PlainEvent("%PLAYER1% Gick vilse när han skulle till hemköp och gick rätt in på arenan.") { Conditions = [new IsFirstRoundCondition()] });
+
 
             // RandomPlainEvent tests
             Events.Add(new RandomPlainEvent(
                 [
-                    "%PLAYER1% felt kind of random and said \"Zoop!!!\"",
-                    "%PLAYER1% was feeling the randoms and said \"Blingo!!!\"",
-                    "%PLAYER1% knew what he had to do, and said \"Kazoops!!!\"",
+                    "%PLAYER1% Mådde lite lustigt och utbrast \"Zoop!!!\"",
+                    "%PLAYER1% Kände 'the randoms' och sa  \"Blingo!!!\"",
+                    "%PLAYER1% Visste precis vad han skulle göra och sa \"Kazoops!!!\"",
                 ]
                 ));
 
             // "Tragic accident" tests
-            Events.Add(new TragicAccidentEvent("%PLAYER1% stubbed his toe and died, violently."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Slog i tån och dog, våldsamt."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Blev hotad med kniv av %PLAYER1%, ramlade och bröt nacken."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Trampade på en landmina, woops."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Försökte jonglera motorsågar, gick inte riktigt som planerat."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Fick trots extrema odds en meteor i skallen."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Ville praktiskt lära sig hur seppuku gick till."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Försökte lära sig hur doxygen fungerar."));
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Fick en fiskmås i ögat"));
 
         }
 

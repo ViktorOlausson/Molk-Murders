@@ -1,9 +1,7 @@
 using CommunityToolkit.Maui.Views;
 using MolkMurders.ViewModels;
 
-namespace MolkMurders.Views;
-
-public partial class CharacterStatsPopup : Popup
+namespace MolkMurders.Views
 {
 	// iqPoints.text
 	// skillPointsAmount
@@ -13,7 +11,7 @@ public partial class CharacterStatsPopup : Popup
 	private int defense = 0;
 	private int agility = 0;
 
-	private readonly string avaliblePointsStr = "Tillg‰ngliga po‰ng: ";
+	private readonly string avaliblePointsStr = "Tillg√§ngliga po√§ng: ";
 	private readonly int maxSkillPoint = 20;
 	private int skillAmountUsed = 0;
 	private int remainingAmount = 20;

@@ -41,6 +41,7 @@
                        Text="Karaktär"
                        FontSize="30"
                        HorizontalOptions="Center"/>
+
             </StackLayout>
 
             <!-- Karaktärs anpassning -->
@@ -54,7 +55,7 @@
                             />
                     <HorizontalStackLayout HorizontalOptions="Center">
                         <Label VerticalTextAlignment="Center"
-                               FontSize="25">
+                   FontSize="25">
                             Karaktärens namn:
                         </Label>
                         <Entry x:Name="CharacterName"
