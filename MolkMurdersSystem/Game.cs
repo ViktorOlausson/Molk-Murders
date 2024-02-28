@@ -13,12 +13,23 @@ namespace MolkMurdersSystem {
         // This class is created when a new game starts (After pressing the Start Game button)
 
         public Game() {
+            /*
             Characters.Add(new Character("Dingo")); // Temporary.
             Characters.Add(new Character("Wingo"));
             Characters.Add(new Character("Tingo"));
             Characters.Add(new Character("Zingo"));
             Characters.Add(new Character("Greg"));
-            Characters.Add(new Character("Håkan"));
+            */
+        }
+
+        public void Populate(List<CharacterProfile> profiles) { // Create and add game characters from profiles
+            Characters.Clear();
+            foreach (CharacterProfile profile in profiles) {
+                Character character = new Character {
+                    profile = profile,
+                };
+                Characters.Add(character);
+            }
         }
 
         public void NewRound() {

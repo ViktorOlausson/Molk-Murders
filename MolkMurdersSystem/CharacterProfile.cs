@@ -11,6 +11,8 @@ namespace MolkMurdersSystem {
         public string Path = "steve.png";
         public int id = 0;
 
+        public int Iq; public int Strength; public int Defense; public int Agility;
+
         public CharacterProfile() { }
 
         public CharacterProfile(string name, string path) {

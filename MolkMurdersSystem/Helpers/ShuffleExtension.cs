@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 
 namespace MolkMurdersSystem.Helpers {
+    // Taken from https://stackoverflow.com/a/1262619
     static class ShuffleExtension {
         public static void Shuffle<T>(this IList<T> list) {
             int n = list.Count;

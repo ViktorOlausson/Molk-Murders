@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MolkMurders.Views.SetupPage">
+             x:Class="MolkMurders.Views.SetupPage"
+             xmlns:local="clr-namespace:MolkMurders.Views"
+             >
     <Grid ColumnSpacing="10" Padding="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -24,35 +26,56 @@
                     <Button Text="Save Roster" x:Name="saveRosterButton"/>
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
-                <VerticalStackLayout Spacing="10"  x:Name="characterEntries">
-                    <Frame x:Name="characterEntriesFrame"
-                        HeightRequest="200"
-                        VerticalOptions="Start">
-                    <!-- Character box content -->
-                    <HorizontalStackLayout Spacing="10">
-                        <Image Source="steve.png"/>
-                        <VerticalStackLayout Spacing="10">
-                            <HorizontalStackLayout Spacing="10">
-                                <Entry
-                                    Placeholder="Insert name..." Text="Steve the mighty"
-                                    WidthRequest="200" HorizontalOptions="Start"
-                                    />
-                                <Button Text="Edit Character"
-                                        Clicked="SkillPointsPop"
-                                        HorizontalOptions="End"
-                                        Command="{Binding EditCharacterCommand}"
-                                        CommandParameter="Steeeeeeve"
-                                        />
+                <VerticalStackLayout Spacing="10"  x:Name="characterEntries" BindableLayout.ItemsSource="{Binding Entries}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame
+                                HeightRequest="200"
+                                VerticalOptions="Start"
+                                >
+                                <!-- Character box content -->
+                                <HorizontalStackLayout Spacing="10">
+                                    <Image Source="{Binding ImagePath}"/>
+                                    <VerticalStackLayout Spacing="10">
+                                        <HorizontalStackLayout Spacing="10">
+                                            <Label
+                                                Text="{Binding Name}"
+                                                WidthRequest="200"
+                                                FontSize="20"
+                                                HorizontalOptions="Start" VerticalOptions="Center"
+                                                />
+                                        <Button Text="Edit Character"
+                                            HorizontalOptions="End"
+                                            Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.EditCharacterCommand}"
+                                            CommandParameter="{Binding .}"
+                                            />
+                                        <Button Text="Delete Character"
+                                            HorizontalOptions="End"
+                                                Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.DeleteCharacterCommand}"
+                                                CommandParameter="{Binding .}"
+                                            />
 
-                            </HorizontalStackLayout>
-                            <!-- TODO: Better style for entries -->
-                            
-                        </VerticalStackLayout>
-                    </HorizontalStackLayout>
-                </Frame>
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label>
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}IQ: {0} - STR: {1} - DEF: {2} - AGI: {3}">
+                                                        <Binding Path="IQ"/>
+                                                        <Binding Path="STR"/>
+                                                        <Binding Path="DEF"/>
+                                                        <Binding Path="AGI"/>
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </HorizontalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Add Character" HorizontalOptions="Start" x:Name="addCharacterButton" Clicked="OnAddCharacterButtonClicked"/>
+                    <Button Text="Add Character" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
                     <Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
@@ -68,7 +91,8 @@
             >
             <VerticalStackLayout VerticalOptions="Center">
                 <Label FontSize="20" Text="Some text could be here." HorizontalOptions="Center"/>
-                <Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>
+                <!--<Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>-->
+                <Button Text="Start!" Command="{Binding GameStartCommand}"/>
             </VerticalStackLayout>
         </Frame>
     </Grid>
