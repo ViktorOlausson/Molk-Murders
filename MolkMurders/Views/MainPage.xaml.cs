@@ -14,6 +14,12 @@ namespace MolkMurders
             this.ShowPopup(new music());
         }
 
+        public void soundButtonClicked(object sender, EventArgs e)
+        {
+            //await Navigation.PushModalAsync(new Settings());
+            this.ShowPopup(new music());
+        }
+
         async void OnStartButtonClicked(object sender, EventArgs e) {
             await Shell.Current.GoToAsync(nameof(SetupPage), false);
         }
