@@ -37,11 +37,11 @@
                 <Image Source="molky.png" WidthRequest="300"></Image>
                 <Button
                     x:Name="startButton"
-                    Text="Start!!!!"
+                    Text="Start"
                     Clicked="OnStartButtonClicked"
                  />
                 <Button
-                    Text="Exit!!!!!!!!"
+                    Text="Exit"
                     x:Name="exit"
                     Clicked="exitButtonClicked"
                  />
