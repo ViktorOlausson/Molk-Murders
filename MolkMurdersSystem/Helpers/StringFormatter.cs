@@ -11,10 +11,13 @@ namespace MolkMurdersSystem.Helpers {
         /// Formats strings, replacing tags with character or item names.
         /// </summary>
         public static string CharacterFormat(string str, EventData data) {
-            // TODO
-
-            // ALSO TODO: If name is empty, make the name value "some guy" or similar
-            return str;
+            string ret = str;
+            StringBuilder builder = new StringBuilder(str);
+            for (int i = 0; i < data.InvolvedCharacters.Length; i++) {
+                string name = data.InvolvedCharacters[i].profile.Name;
+                builder.Replace($"%PLAYER{i+1}%", name == "" ? "Den namnlösa" : name);
+            }
+            return builder.ToString();
         }
 
     }

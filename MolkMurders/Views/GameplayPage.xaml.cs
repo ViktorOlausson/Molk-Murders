@@ -77,7 +77,7 @@ public partial class GameplayPage : ContentPage
 							new Label {
 								HorizontalOptions = LayoutOptions.Center, LineBreakMode = LineBreakMode.WordWrap, MaxLines = 3, HorizontalTextAlignment = TextAlignment.Center,
 								WidthRequest=400,
-								Text= data.Text
+								Text= MolkMurdersSystem.Helpers.StringFormatter.CharacterFormat(data.Text, data)
 							}
 						}
 					}
