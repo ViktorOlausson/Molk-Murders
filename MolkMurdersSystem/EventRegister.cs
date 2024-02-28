@@ -61,6 +61,9 @@ namespace MolkMurdersSystem {
             Events.Add(new TragicAccidentEvent("%PLAYER1% försökte lära sig hur doxygen fungerar."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% fick en fiskmås i ögat."));
 
+            // The Mörder of Mölk Mörders
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
+
         }
 
         // TODO: Function to help add multiple events with the same conditions

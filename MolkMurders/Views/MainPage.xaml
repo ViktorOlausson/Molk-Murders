@@ -30,10 +30,11 @@
                 Margin="10"/>
 
             <VerticalStackLayout Margin="20"
-                HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center" VerticalOptions="Center"
                 Spacing="5"
                 >
-                <Label FontSize="20">Mölky Mörders</Label>
+                <!--<Label FontSize="20">Mölky Mörders</Label>-->
+                <Image Source="molky.png" WidthRequest="300"></Image>
                 <Button
                     x:Name="startButton"
                     Text="Start"
