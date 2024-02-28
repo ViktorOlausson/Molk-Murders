@@ -24,7 +24,8 @@
                     <Button Text="Save Roster" x:Name="saveRosterButton"/>
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
-                <Frame
+                <VerticalStackLayout Spacing="10"  x:Name="characterEntries">
+                    <Frame
                     BackgroundColor="AliceBlue"
                     HeightRequest="200"
                     VerticalOptions="Start"
@@ -39,6 +40,7 @@
                                     WidthRequest="200" HorizontalOptions="Start"
                                     />
                                 <Button Text="Edit Character"
+                                        Clicked="SkillPointsPop"
                                         HorizontalOptions="End"
                                         Command="{Binding EditCharacterCommand}"
                                         CommandParameter="Steeeeeeve"
@@ -50,8 +52,9 @@
                         </VerticalStackLayout>
                     </HorizontalStackLayout>
                 </Frame>
+                </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Add Character" HorizontalOptions="Start" x:Name="addCharacterButton"/>
+                    <Button Text="Add Character" HorizontalOptions="Start" x:Name="addCharacterButton" Clicked="OnAddCharacterButtonClicked"/>
                     <Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>

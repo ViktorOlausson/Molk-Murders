@@ -11,27 +11,27 @@
         
         <!-- Mittendelen -->
         <ScrollView VerticalOptions="Start" Grid.Column="1">
-            <VerticalStackLayout Spacing="20">
+            <VerticalStackLayout Spacing="20" x:Name="eventsList">
                 <!-- Event/Händelse -->
-                <Frame MinimumHeightRequest="200">
+                <!--<Frame MinimumHeightRequest="200">
                     <VerticalStackLayout Spacing="10">
                         <HorizontalStackLayout HeightRequest="100" HorizontalOptions="Center" Spacing="15">
-                            <!-- Här ska alla bild-layouts vara -->
+                            --><!-- Här ska alla bild-layouts vara --><!--
                             <AbsoluteLayout>
-                                <!-- Height behöver vara likadan som horizontalen ovan -->
-                                <!-- Profile picture -->
+                                --><!-- Height behöver vara likadan som horizontalen ovan -->
+                                <!-- Profile picture --><!--
                                 <Image HeightRequest="100" Source="steve.png"></Image>
-                                <!-- Item icon -->
+                                --><!-- Item icon --><!--
                                 <Image Source="steve.png"
                                        HeightRequest="48" 
                                        TranslationX="60" TranslationY="60"
                                        />
                             </AbsoluteLayout>
                             <AbsoluteLayout>
-                                <!-- Height behöver vara likadan som horizontalen ovan -->
-                                <!-- Profile picture -->
+                                --><!-- Height behöver vara likadan som horizontalen ovan -->
+                                <!-- Profile picture --><!--
                                 <Image HeightRequest="100" Source="steve.png"></Image>
-                                <!-- Item icon -->
+                                --><!-- Item icon --><!--
                                 <Image Source="steve.png"
                                    HeightRequest="48" 
                                    TranslationX="60" TranslationY="60"
@@ -39,59 +39,18 @@
                             </AbsoluteLayout>
                         </HorizontalStackLayout>
                         <HorizontalStackLayout HorizontalOptions="Center">
-                            <!-- Här ska händelsetexten ligga -->
-                            <Grid ColumnDefinitions="400, auto" BackgroundColor="Pink">
-                                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                                    <Label HorizontalTextAlignment="Center" LineBreakMode="WordWrap" MaxLines="3"
-                                   Text="Steve and Baby Steve visit Steve and Baby Steve for dinner. There were no survivors. Oh noooooooooooooooooooooooooo"
-                                   />
-                                </VerticalStackLayout>
-                            </Grid>
+                            --><!-- Här ska händelsetexten ligga --><!--
+                             <Label HorizontalTextAlignment="Center" LineBreakMode="WordWrap" MaxLines="3" WidthRequest="400"
+                                Text="Steve and Baby Steve visit Steve and Baby Steve for dinner. There were no survivors. Oh noooooooooooooooooooooooooo"
+                                />
 
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
-                </Frame>
-                <Frame MinimumHeightRequest="200">
-                    <VerticalStackLayout Spacing="10">
-                        <HorizontalStackLayout HeightRequest="100" HorizontalOptions="Center" Spacing="15">
-                            <!-- Här ska alla bild-layouts vara -->
-                            <AbsoluteLayout>
-                                <!-- Height behöver vara likadan som horizontalen ovan -->
-                                <!-- Profile picture -->
-                                <Image HeightRequest="100" Source="steve.png"></Image>
-                                <!-- Item icon -->
-                                <Image Source="steve.png"
-                       HeightRequest="48" 
-                       TranslationX="60" TranslationY="60"
-                       />
-                            </AbsoluteLayout>
-                            <AbsoluteLayout>
-                                <!-- Height behöver vara likadan som horizontalen ovan -->
-                                <!-- Profile picture -->
-                                <Image HeightRequest="100" Source="steve.png"></Image>
-                                <!-- Item icon -->
-                                <Image Source="steve.png"
-                   HeightRequest="48" 
-                   TranslationX="60" TranslationY="60"
-                   />
-                            </AbsoluteLayout>
-                        </HorizontalStackLayout>
-                        <HorizontalStackLayout HorizontalOptions="Center">
-                            <!-- Här ska händelsetexten ligga -->
-                            <Grid ColumnDefinitions="400, auto">
-                                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
-                                    <Label HorizontalTextAlignment="Center" LineBreakMode="WordWrap" MaxLines="3"
-                   Text="Steve and Baby Steve visit Steve and Baby Steve for dinner. There were no survivors. Oh noooooooooooooooooooooooooo"
-                   />
-                                </VerticalStackLayout>
-                            </Grid>
-
-                        </HorizontalStackLayout>
-                    </VerticalStackLayout>
-                </Frame>
-
+                </Frame>-->
             </VerticalStackLayout>
         </ScrollView>
-        
+        <Button Text="Next Round"
+            Grid.Column="2" HeightRequest="30" Clicked="NextRoundButtonClicked" VerticalOptions="Start"/>
+        <Label Grid.Column="0" Text="Round 0" x:Name="roundLabel" VerticalOptions="Start"/>
     </Grid>
 </ContentPage>
