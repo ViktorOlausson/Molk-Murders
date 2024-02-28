@@ -90,7 +90,6 @@
             HeightRequest="200"
             >
             <VerticalStackLayout VerticalOptions="Center">
-                <Label FontSize="20" Text="Some text could be here." HorizontalOptions="Center"/>
                 <!--<Button Text="Start!" x:Name="gameStartButton" Clicked="OnStartButtonClicked"/>-->
                 <Button Text="Start!" Command="{Binding GameStartCommand}"/>
             </VerticalStackLayout>
