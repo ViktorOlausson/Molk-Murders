@@ -13,13 +13,6 @@ namespace MolkMurdersSystem {
             set => conditions = value;
         }
         public int Priority;
-        public EventType Type;
-
-        public enum EventType {
-            Regular,
-            Death,
-            ItemPickup
-        }
 
         public GameEvent() { }
 

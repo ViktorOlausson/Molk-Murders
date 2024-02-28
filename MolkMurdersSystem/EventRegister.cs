@@ -55,6 +55,16 @@ namespace MolkMurdersSystem {
             // The Mörder of Mölk Mörders
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
 
+            // Lambda-test. Används för enklare saker där endast en spelare är inblandad
+            Events.Add(new LambdaGameEvent((character) => {
+                string str = "%PLAYER1% hittade en hög med grus. Najs.";
+                if (character.profile.Iq < 1) {
+                    str = "%PLAYER1% hittade en hög med grus och kände sig hungrig, hungern försvann men det gjorde %PLAYER1% med.";
+                    character.Kill();
+                }
+                return new EventData(str, [character]);
+                }));
+
         }
 
         // TODO: Function to help add multiple events with the same conditions

@@ -85,6 +85,13 @@ public partial class GameplayPage : ContentPage
 			}
 		};
 
+		foreach (Character c in data.InvolvedCharacters) {
+			if (c.State == Character.LivingState.Dead) {
+                frame.BackgroundColor = new Color(199, 123, 109);
+                break;
+			}
+		}
+
 		eventsList.Add(frame);
 	}
 
