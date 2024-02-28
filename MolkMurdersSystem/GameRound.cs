@@ -16,6 +16,8 @@ namespace MolkMurdersSystem {
             List<Character> characters = new List<Character>(Main.CurrentGame.Characters); // Copy of the characters list.
             characters.Shuffle(); // Shuffle the list of characters, making the game more fair.
 
+            // TODO: End game when only one or less character remains?
+
             foreach (Character character in characters) {
                 if (character.State == Character.LivingState.Dead) continue; // TODO: Make dead characters do simple actions...?
                 List<GameEvent> choosable = new List<GameEvent>();
