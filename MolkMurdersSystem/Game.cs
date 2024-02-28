@@ -18,6 +18,7 @@ namespace MolkMurdersSystem {
             Characters.Add(new Character("Tingo"));
             Characters.Add(new Character("Zingo"));
             Characters.Add(new Character("Greg"));
+            Characters.Add(new Character("Håkan"));
         }
 
         public void NewRound() {

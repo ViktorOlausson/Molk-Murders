@@ -15,6 +15,7 @@ namespace MolkMurdersSystem.GameEvents {
         public override EventData Execute(Character character) {
             character.Kill(); // :-(
             return new EventData(text, [character]);
+
         }
     }
 }
