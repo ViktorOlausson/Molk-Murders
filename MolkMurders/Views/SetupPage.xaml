@@ -22,8 +22,8 @@
             <VerticalStackLayout Spacing="10">
                 <!-- Buttons -->
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Load Roster" x:Name="loadRosterButton"/>
-                    <Button Text="Save Roster" x:Name="saveRosterButton"/>
+                    <!--<Button Text="Load Roster" x:Name="loadRosterButton"/>
+                    <Button Text="Save Roster" x:Name="saveRosterButton"/>-->
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
                 <VerticalStackLayout Spacing="10"  x:Name="characterEntries" BindableLayout.ItemsSource="{Binding Entries}">
@@ -76,7 +76,7 @@
                 </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
                     <Button Text="Add Character" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
-                    <Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>
+                    <!--<Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>-->
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             
