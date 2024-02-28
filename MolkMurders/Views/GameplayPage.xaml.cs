@@ -26,6 +26,17 @@ public partial class GameplayPage : ContentPage
                 BuildEventBox(data);
 				roundLabel.Text = Main.CurrentGame.Rounds.Count.ToString();
             }
+            if (Main.CurrentGame.IsOver) {
+                Button button = new Button {
+                    Text = "Tillbaka",
+                    HeightRequest = 30,
+                    VerticalOptions = LayoutOptions.Start,
+                };
+                button.Clicked += async (sender, e) => {
+                    await Shell.Current.GoToAsync(nameof(SetupPage), true);
+                };
+                buttonList.Children.Add(button);
+            }
         }
 		//Content = new Label(Main.CurrentGame.ro);
 		
@@ -56,7 +67,7 @@ public partial class GameplayPage : ContentPage
                 });
             } else if (c.HeldItem != null) { // Character has item
                 portrait.Children.Add(new Image {
-                    Source = "steve.png", // TODO: Get item texture
+                    Source = "pokal.png", // TODO: Get item texture
                     TranslationX = 60, TranslationY = 60,
                     HeightRequest = 48
                 });
@@ -93,6 +104,7 @@ public partial class GameplayPage : ContentPage
 		}
 
 		eventsList.Add(frame);
+
 	}
 
     async void NextRoundButtonClicked(object sender, EventArgs e) {

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace MolkMurdersSystem {
     public class Game {
 
+        public bool IsOver = false;
+
         public List<GameRound> Rounds = new List<GameRound>();
         public List<Character> Characters = new List<Character>();
 

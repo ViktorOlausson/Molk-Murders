@@ -11,7 +11,11 @@ namespace MolkMurdersSystem {
 
         public static List<GameEvent> Events = new List<GameEvent>();
 
+        public static List<GameEvent> WinnerEvents = new List<GameEvent>();
+
         public static void Register() {
+            RegisterWinnerEvents();
+
             // It would also be possible to make the text inside PlainEvent completely random. Priority would still matter.
             Events.Add(new PlainEvent("%PLAYER1% gick vilse i skogen i exakt två timmar."));
             Events.Add(new PlainEvent("%PLAYER1% missade bussen precis och fick vänta en timme."));
@@ -82,7 +86,9 @@ namespace MolkMurdersSystem {
 
         }
 
-        // TODO: Function to help add multiple events with the same conditions
+        public static void RegisterWinnerEvents() {
+            WinnerEvents.Add(new PlainEvent("%PLAYER1% känner sig som en riktig vinnare."));
+        }
 
     }
 }
