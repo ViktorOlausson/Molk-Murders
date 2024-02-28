@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:media="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+           x:Class="MolkMurders.Views.music">
+    <VerticalStackLayout>
+        <Grid BackgroundColor="Purple" MinimumWidthRequest="500" MinimumHeightRequest="500" >
+
+            <VerticalStackLayout
+                Margin="10,10,10,10"
+                BindingContext="{x:Reference mediaElement}"
+                >
+
+                <media:MediaElement
+                    x:Name="mediaElement"    
+                    ShouldAutoPlay="True"
+                    ShouldLoopPlayback="True"
+                    HeightRequest="0"
+                    WidthRequest="0"
+                    Source="embed://Mölkmörders.mp3" />
+
+                <Label Text="Toggle music on or of:"></Label>
+
+
+                <!--bytta till switch-->
+                <Button Text="Stop"
+                        x:Name="PlayPause"
+                        Margin="150, 150, 150, 150"
+                        Clicked="OnPlayPauseButtonClicked"
+                        
+                        Padding="50,50,50,50">
+                    <!--pausar eller starta music-->
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 >
+                            <Setter Property="Text"
+                                    Value="Stop" 
+                                                />
+
+                        </DataTrigger>
+                        <DataTrigger TargetType="Button"
+                                 Binding="{Binding CurrentState}"
+                                 >
+                            <Setter Property="IsEnabled"
+                                Value="False" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+
+
+            </VerticalStackLayout>
+            <Button Margin="0,400,0,10"
+                    x:Name="CloseBtn"
+                    Text="done"
+                    Clicked="doneBtn_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Padding="20"
+                    />
+        </Grid>
+
+    </VerticalStackLayout>
+</mct:Popup>

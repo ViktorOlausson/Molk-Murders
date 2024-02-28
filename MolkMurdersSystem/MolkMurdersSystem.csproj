@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="3.0.1" />
+  </ItemGroup>
+
 </Project>
