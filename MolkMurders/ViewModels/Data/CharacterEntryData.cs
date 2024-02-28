@@ -22,7 +22,7 @@ namespace MolkMurders.ViewModels.Data {
         public string ImagePath {
             get => imagePath;
             set {
-                name = value;
+                imagePath = value;
                 OnPropertyChanged(nameof(ImagePath));
             }
         }

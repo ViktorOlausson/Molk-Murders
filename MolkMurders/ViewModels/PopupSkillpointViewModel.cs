@@ -30,6 +30,20 @@ namespace MolkMurders.ViewModels
             }
         }
 
+        private string profilePath = "steve.png";
+        public string ProfilePath {
+            get { return profilePath;}
+            set {
+                if(profilePath != value) {
+                    profilePath = value;
+                    OnPropertyChanged();
+                    if (entry != null) {
+                        entry.ImagePath = value;
+                    }
+                }
+            }
+        }
+
         // Time for repetitive code #DRY
         private int iq = 0;
         private int str = 0;
@@ -67,6 +81,7 @@ namespace MolkMurders.ViewModels
             CharacterName = entry.Name;
             IQ = entry.IQ; STR = entry.STR; DEF = entry.DEF; AGI = entry.AGI;
             AvailablePoints = entry.AvailablePoints;
+            ProfilePath = entry.ImagePath;
             this.entry = entry;
         }
 
@@ -118,6 +133,19 @@ namespace MolkMurders.ViewModels
                 }
             
             }
+        }
+
+        public ICommand SetImageCommand => new Command(SetImage);
+        private async void SetImage() {
+            var result = await FilePicker.PickAsync(new PickOptions {
+                FileTypes = FilePickerFileType.Images,
+                PickerTitle = "Select Character Profile Picture"
+            });
+
+            if (result != null) {
+                ProfilePath = result.FullPath;
+            }
+
         }
 
     }

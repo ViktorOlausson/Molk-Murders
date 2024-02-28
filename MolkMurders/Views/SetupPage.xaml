@@ -35,7 +35,7 @@
                                 >
                                 <!-- Character box content -->
                                 <HorizontalStackLayout Spacing="10">
-                                    <Image Source="steve.png"/>
+                                    <Image Source="{Binding ImagePath}"/>
                                     <VerticalStackLayout Spacing="10">
                                         <HorizontalStackLayout Spacing="10">
                                             <Label

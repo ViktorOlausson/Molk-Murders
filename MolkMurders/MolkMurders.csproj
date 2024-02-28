@@ -96,5 +96,16 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+   
+   <ItemGroup>
+     <None Update="Data\info.txt">
+       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </None>
+   </ItemGroup>
+   
+   <ItemGroup>
+     <Folder Include="Data\Characters\" />
+     <Folder Include="Data\Rosters\" />
+   </ItemGroup>
 
 </Project>

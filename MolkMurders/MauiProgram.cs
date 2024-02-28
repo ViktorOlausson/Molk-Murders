@@ -3,11 +3,15 @@ using Microsoft.Extensions.Logging;
 using MolkMurders.ViewModels;
 using MolkMurders.Views;
 using MolkMurdersSystem;
+using System.Diagnostics;
 
 namespace MolkMurders
 {
     public static class MauiProgram
     {
+
+        public static string DataPath = "";
+
         public static MauiApp CreateMauiApp()
         {
 
@@ -26,6 +30,11 @@ namespace MolkMurders
 
             // Låter oss skriva saker till konsolen
             builder.Logging.AddDebug();
+
+            // Initialize appdata directory
+            string curFile = Path.Combine(AppContext.BaseDirectory, "Data/info.txt");
+            Trace.WriteLine(File.Exists(curFile) ? "File exists." : "File does not exist.");
+
 
             // ViewModels
             builder.Services.AddSingleton<MainPage>();

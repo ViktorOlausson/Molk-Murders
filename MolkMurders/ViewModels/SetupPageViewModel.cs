@@ -69,6 +69,5 @@ namespace MolkMurders.ViewModels {
             MolkMurdersSystem.Main.StartGame(profiles);
             await Shell.Current.GoToAsync(nameof(GameplayPage), false);
         }
-
     }
 }
