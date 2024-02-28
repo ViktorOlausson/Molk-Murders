@@ -7,13 +7,27 @@
         <StackLayout
             Padding="5"
             >
-            
+
             <Button
                 Text="Settings"
+                FontAttributes="Bold"
+                CharacterSpacing="1.5"
                 HorizontalOptions="Start"
                 x:Name="settingsButton"
                 Clicked="settingsButtonClicked"
-                />
+                MinimumWidthRequest="100"
+                MinimumHeightRequest="50"
+                Margin="10"/>
+            <Button
+                Text="Ljud"
+                FontAttributes="Bold"
+                CharacterSpacing="1.5"
+                HorizontalOptions="Start"
+                x:Name="soundButton"
+                Clicked="soundButtonClicked"
+                MinimumWidthRequest="100"
+                MinimumHeightRequest="50"
+                Margin="10"/>
 
             <VerticalStackLayout Margin="20"
                 HorizontalOptions="Center" VerticalOptions="CenterAndExpand"
