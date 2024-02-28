@@ -1,3 +1,5 @@
+using Microsoft.UI.Xaml;
+
 namespace MolkMurders.Views;
 
 public partial class Settings
@@ -10,4 +12,5 @@ public partial class Settings
 	{
 		Close();
 	}
+    
 }
