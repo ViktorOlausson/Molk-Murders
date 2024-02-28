@@ -20,6 +20,10 @@ namespace MolkMurdersSystem {
             Events.Add(new PlainEvent("%PLAYER1% Fastnade hos optikern."));
             Events.Add(new PlainEvent("%PLAYER1% Trasslade in sig i sina hörlurskablar och kunde inte komma loss."));
             Events.Add(new PlainEvent("%PLAYER1% Ville hellre lära sig ett nytt språk, danska kanske?."));
+            Events.Add(new PlainEvent("%PLAYER1% Sprang och gömde sig i en buske."));
+            Events.Add(new PlainEvent("%PLAYER1% Fick en snilleblixt."));
+            Events.Add(new PlainEvent("%PLAYER1% Fick en tindermatchning och sprang på date istället."));
+            Events.Add(new PlainEvent("%PLAYER1% Blev arg och hungrig på samma gång"));
 
 
             // Condition tests
@@ -46,7 +50,7 @@ namespace MolkMurdersSystem {
             Events.Add(new TragicAccidentEvent("%PLAYER1% Fick trots extrema odds en meteor i skallen."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% Ville praktiskt lära sig hur seppuku gick till."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% Försökte lära sig hur doxygen fungerar."));
-
+            Events.Add(new TragicAccidentEvent("%PLAYER1% Fick en fiskmås i ögat"));
 
         }
 
