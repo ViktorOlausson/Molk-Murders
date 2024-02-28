@@ -11,7 +11,6 @@ namespace MolkMurdersSystem.Helpers {
         /// Formats strings, replacing tags with character or item names.
         /// </summary>
         public static string CharacterFormat(string str, EventData data) {
-            string ret = str;
             StringBuilder builder = new StringBuilder(str);
             for (int i = 0; i < data.InvolvedCharacters.Length; i++) {
                 string name = data.InvolvedCharacters[i].profile.Name;
