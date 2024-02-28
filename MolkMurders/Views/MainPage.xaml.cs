@@ -11,6 +11,7 @@ namespace MolkMurders
         {
             InitializeComponent();
             BindingContext = vm;
+            this.ShowPopup(new music());
         }
 
         async void OnStartButtonClicked(object sender, EventArgs e) {

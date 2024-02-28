@@ -59,6 +59,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\littleskull.png" />
 	  <None Remove="Resources\Images\steve.png" />
+	  <None Remove="Resources\Raw\Mölkmörders.mp3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -110,6 +111,12 @@
    <ItemGroup>
      <Folder Include="Data\Characters\" />
      <Folder Include="Data\Rosters\" />
+   </ItemGroup>
+   
+   <ItemGroup>
+     <MauiAsset Update="Resources\Raw\Mölkmörders.mp3">
+       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </MauiAsset>
    </ItemGroup>
 
 </Project>
