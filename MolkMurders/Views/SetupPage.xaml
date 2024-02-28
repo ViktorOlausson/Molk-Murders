@@ -25,11 +25,9 @@
                 </HorizontalStackLayout>
                 <!-- Character Entries -->
                 <VerticalStackLayout Spacing="10"  x:Name="characterEntries">
-                    <Frame
-                    BackgroundColor="AliceBlue"
-                    HeightRequest="200"
-                    VerticalOptions="Start"
-                    >
+                    <Frame x:Name="characterEntriesFrame"
+                        HeightRequest="200"
+                        VerticalOptions="Start">
                     <!-- Character box content -->
                     <HorizontalStackLayout Spacing="10">
                         <Image Source="steve.png"/>
@@ -66,7 +64,6 @@
         <Frame
             Grid.Column="1"
             VerticalOptions="Start"
-            BackgroundColor="AliceBlue"
             HeightRequest="200"
             >
             <VerticalStackLayout VerticalOptions="Center">

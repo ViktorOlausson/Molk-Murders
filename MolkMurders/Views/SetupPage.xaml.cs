@@ -59,7 +59,6 @@ public partial class SetupPage : ContentPage
 		};
 
 		Frame frame = new Frame {
-			BackgroundColor = Colors.AliceBlue,
 			HeightRequest=200,
 			VerticalOptions = LayoutOptions.Start,
 			Content = stack
