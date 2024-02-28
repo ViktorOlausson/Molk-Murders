@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace MolkMurdersSystem {
     public abstract class GameEvent {
         // TODO: Make properties out of these
-        public IEventCondition[] Conditions;
+        private IEventCondition[] conditions;
+        public IEventCondition[] Conditions {
+            get => conditions;
+            set => conditions = value;
+        }
         public int Priority;
         public EventType Type;
 
