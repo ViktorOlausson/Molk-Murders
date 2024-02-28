@@ -53,7 +53,6 @@ namespace MolkMurdersSystem {
 
             // "Tragic accident" tests
             Events.Add(new TragicAccidentEvent("%PLAYER1% slog i tån och dog, våldsamt."));
-            Events.Add(new TragicAccidentEvent("%PLAYER1% blev hotad med kniv av, ramlade och bröt nacken."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% trampade på en landmina, woops."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% försökte jonglera motorsågar, gick inte riktigt som planerat."));
             Events.Add(new TragicAccidentEvent("%PLAYER1% fick trots extrema odds en meteor i skallen."));
@@ -63,6 +62,13 @@ namespace MolkMurdersSystem {
 
             // The Mörder of Mölk Mörders
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% såg sin chans och hög %PLAYER2% med sin fickkniv hårt och länge."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tog sikte med sitt gevär och sköt %PLAYER2%."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% drog sitt svärd och under en fem timmar lång duell med tre fikapauser lyckades döda %PLAYER2%."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% blev hotad med kniv av %PLAYER2%, ramlade och bröt nacken."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% drog ett så extremt dåligt skämt att %PLAYER2% begick självmord."));
+
 
         }
 
