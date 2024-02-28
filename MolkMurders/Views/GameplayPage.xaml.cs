@@ -98,7 +98,7 @@ public partial class GameplayPage : ContentPage
 
 		foreach (Character c in data.InvolvedCharacters) {
 			if (c.State == Character.LivingState.Dead) {
-                frame.BackgroundColor = new Color(199, 123, 109);
+                frame.BackgroundColor = new Color(227, 193, 193);
                 break;
 			}
 		}
