@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\death.png" />
 	  <None Remove="Resources\Images\littleskull.png" />
 	  <None Remove="Resources\Images\molky.png" />
+	  <None Remove="Resources\Images\molky_dark.png" />
 	  <None Remove="Resources\Images\steve.png" />
 	  <None Remove="Resources\Raw\Mölkmörders.mp3" />
 	</ItemGroup>
