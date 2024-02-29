@@ -3,63 +3,62 @@
            xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:media="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-           x:Class="MolkMurders.Views.music">
+           x:Class="MolkMurders.Views.music"
+           CanBeDismissedByTappingOutsideOfPopup="False"
+           Color="#00FFFFFF"
+           Size="350,350">
     <VerticalStackLayout>
-        <Grid BackgroundColor="Purple" MinimumWidthRequest="500" MinimumHeightRequest="500" >
+        <Frame>
+            <Grid>
 
-            <VerticalStackLayout
-                Margin="10,10,10,10"
-                BindingContext="{x:Reference mediaElement}"
-                >
+                <VerticalStackLayout BindingContext="{x:Reference mediaElement}"
+                                     Spacing="10">
+                    <media:MediaElement
+                        x:Name="mediaElement"    
+                        ShouldAutoPlay="True"
+                        ShouldLoopPlayback="True"
+                        HeightRequest="0"
+                        WidthRequest="0"
+                        Source="embed://Mölkmörders.mp3" />
+                    <Label Text="Musik"
+                           FontSize="25"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
 
-                <media:MediaElement
-                    x:Name="mediaElement"    
-                    ShouldAutoPlay="True"
-                    ShouldLoopPlayback="True"
-                    HeightRequest="0"
-                    WidthRequest="0"
-                    Source="embed://Mölkmörders.mp3" />
+                    <!--bytta till switch-->
+                    <Button Text="PÅ"
+                            x:Name="PlayPause"
+                            Clicked="OnPlayPauseButtonClicked"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="70">
+                        <!--pausar eller starta music-->
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button"
+                                     Binding="{Binding CurrentState}"
+                                     >
+                                <Setter Property="Text"
+                                        Value="Stop" 
+                                                    />
 
-                <Label Text="Toggle music on or of:"></Label>
-
-
-                <!--bytta till switch-->
-                <Button Text="Stop"
-                        x:Name="PlayPause"
-                        Margin="150, 150, 150, 150"
-                        Clicked="OnPlayPauseButtonClicked"
-                        
-                        Padding="50,50,50,50">
-                    <!--pausar eller starta music-->
-                    <Button.Triggers>
-                        <DataTrigger TargetType="Button"
-                                 Binding="{Binding CurrentState}"
-                                 >
-                            <Setter Property="Text"
-                                    Value="Stop" 
-                                                />
-
-                        </DataTrigger>
-                        <DataTrigger TargetType="Button"
-                                 Binding="{Binding CurrentState}"
-                                 >
-                            <Setter Property="IsEnabled"
-                                Value="False" />
-                        </DataTrigger>
-                    </Button.Triggers>
-                </Button>
-
-
-            </VerticalStackLayout>
-            <Button Margin="0,400,0,10"
-                    x:Name="CloseBtn"
-                    Text="done"
-                    Clicked="doneBtn_Clicked"
-                    HorizontalOptions="Center"
-                    VerticalOptions="End"
-                    Padding="20"
-                    />
-        </Grid>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button"
+                                     Binding="{Binding CurrentState}"
+                                     >
+                                <Setter Property="IsEnabled"
+                                    Value="False" />
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    <Button x:Name="CloseBtn"
+                            Text="Stäng"
+                            Clicked="doneBtn_Clicked"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            WidthRequest="70"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
 
     </VerticalStackLayout>
 </mct:Popup>

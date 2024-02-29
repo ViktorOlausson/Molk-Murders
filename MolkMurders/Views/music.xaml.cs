@@ -28,14 +28,14 @@ public partial class music
             mediaElement.CurrentState == MediaElementState.Paused)
         {
             mediaElement.Play();
-            PlayPause.Text = "Stop";
+            PlayPause.Text = "PÅ";
 
 
         }
         else if (mediaElement.CurrentState == MediaElementState.Playing)
         {
             mediaElement.Pause();
-            PlayPause.Text = "Start";
+            PlayPause.Text = "AV";
 
         }
     }
