@@ -25,6 +25,8 @@
                             HorizontalOptions="End"
                             VerticalOptions="Center"/>
 
+                <!-- FIXME: Spelar ny musik varja gång den öppnas-->
+                
                 <VerticalStackLayout BindingContext="{x:Reference mediaElement}"
                                      Grid.Row="1"
                                      Padding="30">
@@ -36,7 +38,7 @@
                         WidthRequest="0"
                         Source="embed://Mölkmörders.mp3" />
 
-                    <!--byta till switch-->
+                    <!-- TODO: byta till switch-->
                     <Button Text="PÅ"
                             x:Name="PlayPause"
                             Clicked="OnPlayPauseButtonClicked"
