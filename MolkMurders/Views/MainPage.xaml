@@ -7,9 +7,9 @@
         <StackLayout
             Padding="5"
             >
-
+             <!-- TODO: Ändra utseende på mainpage -->
             <Button
-                Text="Settings"
+                Text="Inställningar"
                 FontAttributes="Bold"
                 CharacterSpacing="1.5"
                 HorizontalOptions="Start"
@@ -18,8 +18,9 @@
                 MinimumWidthRequest="100"
                 MinimumHeightRequest="50"
                 Margin="10"/>
+             <!-- TODO: Kanske bara ha en knapp för ljud och inställningar? -->
             <Button
-                Text="Ljud"
+                Text="Ljudinställningar"
                 FontAttributes="Bold"
                 CharacterSpacing="1.5"
                 HorizontalOptions="Start"
@@ -41,10 +42,12 @@
                     Clicked="OnStartButtonClicked"
                  />
                 <Button
-                    Text="Exit"
+                    Text="Avsluta"
                     x:Name="exit"
                     Clicked="exitButtonClicked"
                  />
+                
+                
             </VerticalStackLayout>
         </StackLayout>
     </ScrollView>

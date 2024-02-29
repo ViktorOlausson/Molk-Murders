@@ -49,7 +49,7 @@
                                             Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.EditCharacterCommand}"
                                             CommandParameter="{Binding .}"
                                             />
-                                        <Button Text="Ta bort karaktär"
+                                        <Button Text="Ta bort Karaktär"
                                             HorizontalOptions="End"
                                                 Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.DeleteCharacterCommand}"
                                                 CommandParameter="{Binding .}"
@@ -75,7 +75,7 @@
                     </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Lägg till spelare" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
+                    <Button Text="Lägg till Karaktär" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
                     <!--<Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>-->
                 </HorizontalStackLayout>
             </VerticalStackLayout>

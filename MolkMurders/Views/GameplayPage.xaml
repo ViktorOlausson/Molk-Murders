@@ -50,7 +50,7 @@
             </VerticalStackLayout>
         </ScrollView>
         <VerticalStackLayout Grid.Column="2" x:Name="buttonList" Spacing="10">
-            <Button Text="Next Round"
+            <Button Text="Nästa Runda"
                 HeightRequest="30" Clicked="NextRoundButtonClicked" VerticalOptions="Start"/>
         </VerticalStackLayout>
         
