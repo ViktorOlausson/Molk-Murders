@@ -10,9 +10,24 @@
     <VerticalStackLayout>
         <Frame>
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"
+                    Text="Musik"
+                           FontSize="25"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                <Button x:Name="CloseBtn"
+                            Text="X"
+                            Clicked="doneBtn_Clicked"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"/>
 
                 <VerticalStackLayout BindingContext="{x:Reference mediaElement}"
-                                     Spacing="10">
+                                     Grid.Row="1"
+                                     Padding="30">
                     <media:MediaElement
                         x:Name="mediaElement"    
                         ShouldAutoPlay="True"
@@ -20,12 +35,8 @@
                         HeightRequest="0"
                         WidthRequest="0"
                         Source="embed://Mölkmörders.mp3" />
-                    <Label Text="Musik"
-                           FontSize="25"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
 
-                    <!--bytta till switch-->
+                    <!--byta till switch-->
                     <Button Text="PÅ"
                             x:Name="PlayPause"
                             Clicked="OnPlayPauseButtonClicked"
@@ -38,24 +49,16 @@
                                      Binding="{Binding CurrentState}"
                                      >
                                 <Setter Property="Text"
-                                        Value="Stop" 
-                                                    />
+                                        Value="Stop"/>
 
                             </DataTrigger>
                             <DataTrigger TargetType="Button"
-                                     Binding="{Binding CurrentState}"
-                                     >
+                                     Binding="{Binding CurrentState}">
                                 <Setter Property="IsEnabled"
                                     Value="False" />
                             </DataTrigger>
                         </Button.Triggers>
                     </Button>
-                    <Button x:Name="CloseBtn"
-                            Text="Stäng"
-                            Clicked="doneBtn_Clicked"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            WidthRequest="70"/>
                 </VerticalStackLayout>
             </Grid>
         </Frame>
