@@ -66,7 +66,7 @@ namespace MolkMurdersSystem {
 
             // The Mörder of Mölk Mörders
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
-            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% såg sin chans och hög %PLAYER2% med sin fickkniv hårt och länge."));
+            Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% såg sin chans och högg %PLAYER2% med sin fickkniv hårt och länge."));
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tog sikte med sitt gevär och sköt %PLAYER2%."));
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% drog sitt svärd och under en fem timmar lång duell med tre fikapauser lyckades döda %PLAYER2%."));
             Events.Add(new CharacterKillsCharacterEvent("%PLAYER1% tyckte det var dags att %PLAYER2% mötte sitt öde."));
