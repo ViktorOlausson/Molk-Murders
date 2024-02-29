@@ -5,9 +5,9 @@
            xmlns:media="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
            x:Class="MolkMurders.Views.music"
            CanBeDismissedByTappingOutsideOfPopup="False"
-           Color="#00FFFFFF"
-           Size="350,350">
-    <VerticalStackLayout>
+           Color="#00FFFFFF">
+    <VerticalStackLayout HeightRequest="250"
+                         WidthRequest="350">
         <Frame>
             <Grid>
                 <Grid.RowDefinitions>
@@ -15,15 +15,16 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0"
-                    Text="Musik"
-                           FontSize="25"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"/>
+                       Text="Musik"
+                       FontSize="25"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 <Button x:Name="CloseBtn"
-                            Text="X"
-                            Clicked="doneBtn_Clicked"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"/>
+                        Text="X"
+                        Clicked="doneBtn_Clicked"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        FontAttributes="Bold"/>
 
                 <!-- FIXME: Spelar ny musik varja gång den öppnas-->
                 

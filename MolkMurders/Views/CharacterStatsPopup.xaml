@@ -29,6 +29,7 @@
             <Button Grid.Row="0"
                     Grid.ColumnSpan="2"
                     x:Name="CloseBtn"
+                    FontAttributes="Bold"
                     Text="X"
                     Clicked="CloseBtn_Clicked"
                     VerticalOptions="Center"
