@@ -44,12 +44,12 @@
                                                 FontSize="20"
                                                 HorizontalOptions="Start" VerticalOptions="Center"
                                                 />
-                                        <Button Text="Edit Character"
+                                        <Button Text="Anpassa Karaktär"
                                             HorizontalOptions="End"
                                             Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.EditCharacterCommand}"
                                             CommandParameter="{Binding .}"
                                             />
-                                        <Button Text="Delete Character"
+                                        <Button Text="Ta bort Karaktär"
                                             HorizontalOptions="End"
                                                 Command= "{Binding Source={RelativeSource AncestorType={x:Type local:SetupPage}}, Path=BindingContext.DeleteCharacterCommand}"
                                                 CommandParameter="{Binding .}"
@@ -75,7 +75,7 @@
                     </BindableLayout.ItemTemplate>
                 </VerticalStackLayout>
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Add Character" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
+                    <Button Text="Lägg till Karaktär" HorizontalOptions="Start" Command="{Binding AddCharacterCommand}"/>
                     <!--<Button Text="Add Character from Roster..." HorizontalOptions="Start" x:Name="addFromRosterButton"/>-->
                 </HorizontalStackLayout>
             </VerticalStackLayout>
